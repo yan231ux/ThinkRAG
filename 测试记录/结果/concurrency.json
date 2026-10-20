@@ -1,0 +1,163 @@
+{
+  "question": "电池容量是多少毫安时？",
+  "levels": [
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      8,
+      8
+    ]
+  ],
+  "layers": {
+    "retrieval": [
+      {
+        "concurrency": 1,
+        "requests": 8,
+        "success": 8,
+        "success_rate": 100.0,
+        "wall_seconds": 0.28,
+        "throughput_qps": 28.99,
+        "p50": 0.024,
+        "p95": 0.033,
+        "max": 0.036,
+        "min": 0.021,
+        "error_kinds": {},
+        "sample_answers": [
+          "hit=5",
+          "hit=5"
+        ]
+      },
+      {
+        "concurrency": 2,
+        "requests": 8,
+        "success": 8,
+        "success_rate": 100.0,
+        "wall_seconds": 0.14,
+        "throughput_qps": 56.43,
+        "p50": 0.033,
+        "p95": 0.042,
+        "max": 0.043,
+        "min": 0.03,
+        "error_kinds": {},
+        "sample_answers": [
+          "hit=5",
+          "hit=5"
+        ]
+      },
+      {
+        "concurrency": 4,
+        "requests": 8,
+        "success": 8,
+        "success_rate": 100.0,
+        "wall_seconds": 0.14,
+        "throughput_qps": 56.05,
+        "p50": 0.065,
+        "p95": 0.082,
+        "max": 0.085,
+        "min": 0.047,
+        "error_kinds": {},
+        "sample_answers": [
+          "hit=5",
+          "hit=5"
+        ]
+      },
+      {
+        "concurrency": 8,
+        "requests": 8,
+        "success": 8,
+        "success_rate": 100.0,
+        "wall_seconds": 0.14,
+        "throughput_qps": 55.4,
+        "p50": 0.129,
+        "p95": 0.131,
+        "max": 0.132,
+        "min": 0.081,
+        "error_kinds": {},
+        "sample_answers": [
+          "hit=5",
+          "hit=5"
+        ]
+      }
+    ],
+    "end2end": [
+      {
+        "concurrency": 1,
+        "requests": 8,
+        "success": 8,
+        "success_rate": 100.0,
+        "wall_seconds": 7.85,
+        "throughput_qps": 1.02,
+        "p50": 0.984,
+        "p95": 1.365,
+        "max": 1.374,
+        "min": 0.577,
+        "error_kinds": {},
+        "sample_answers": [
+          "电池容量是4200毫安时。",
+          "电池容量是 4200 毫安时。"
+        ]
+      },
+      {
+        "concurrency": 2,
+        "requests": 8,
+        "success": 8,
+        "success_rate": 100.0,
+        "wall_seconds": 3.71,
+        "throughput_qps": 2.15,
+        "p50": 0.912,
+        "p95": 0.994,
+        "max": 0.996,
+        "min": 0.81,
+        "error_kinds": {},
+        "sample_answers": [
+          "电池容量是 4200 毫安时。",
+          "电池容量是 4200 毫安时。"
+        ]
+      },
+      {
+        "concurrency": 4,
+        "requests": 8,
+        "success": 8,
+        "success_rate": 100.0,
+        "wall_seconds": 2.56,
+        "throughput_qps": 3.12,
+        "p50": 1.266,
+        "p95": 1.623,
+        "max": 1.631,
+        "min": 0.708,
+        "error_kinds": {},
+        "sample_answers": [
+          "电池容量是 4200 毫安时。",
+          "电池容量是 4200 毫安时。"
+        ]
+      },
+      {
+        "concurrency": 8,
+        "requests": 8,
+        "success": 8,
+        "success_rate": 100.0,
+        "wall_seconds": 1.39,
+        "throughput_qps": 5.77,
+        "p50": 1.292,
+        "p95": 1.359,
+        "max": 1.367,
+        "min": 1.26,
+        "error_kinds": {},
+        "sample_answers": [
+          "电池容量是 4200 毫安时。",
+          "电池容量是 4200 毫安时。"
+        ]
+      }
+    ]
+  }
+}

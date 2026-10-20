@@ -88,6 +88,13 @@ def build_env():
     im = index_mod.IndexManager("kb")
     im.check_index_exists()
     im.load_files([{"name": "产品手册.txt"}], 200, 50)  # 基线：切成 10 块
+
+    # SimpleFusionRetriever 构造时会读 Settings.llm，未配置就尝试默认 OpenAI 并抛
+    # ValueError。A 层要测「不含 LLM 的纯检索」，这里放一个 MockLLM：
+    # 既满足构造需要，又保证检索阶段不会真的调用任何模型。
+    from llama_index.core.llms import MockLLM
+
+    Settings.llm = MockLLM()
     return im, tmp
 
 
@@ -126,8 +133,11 @@ def one_query(im, question, with_llm):
             if not answer.strip():
                 raise RuntimeError("生成结果为空")
         else:
-            # 只走检索：取回召回节点，不调用 LLM
-            nodes = qe.retriever.retrieve(question)
+            # 只走检索：取回召回节点，不调用 LLM。
+            # 检索器要 QueryBundle，不能直接传字符串。
+            from llama_index.core.schema import QueryBundle
+
+            nodes = qe.retriever.retrieve(QueryBundle(query_str=question))
             answer = f"hit={len(nodes)}"
             if not nodes:
                 raise RuntimeError("检索无结果")

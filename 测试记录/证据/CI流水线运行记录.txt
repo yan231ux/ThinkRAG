@@ -1,0 +1,54 @@
+GitHub Actions 冒烟流水线运行记录
+======================================================================
+仓库        : yan231ux/ThinkRAG（fork 自 wzdavid/ThinkRAG）
+工作流      : QA Smoke（.github/workflows/qa-smoke.yml）
+运行编号    : #1
+触发方式    : push → main 分支
+提交        : 26eda9b81caf7b2d3e8a87999d1ee0aed0c2f9b6
+运行地址    : https://github.com/yan231ux/ThinkRAG/actions/runs/39379364541
+总体结论    : completed / success
+
+----------------------------------------------------------------------
+执行环境（GitHub 托管 runner，与本地 Windows 环境不同）
+----------------------------------------------------------------------
+runner      : ubuntu-latest
+Python      : 3.11.17（本地 3.12.10）
+pytest      : 9.1.1
+嵌入模型    : MockEmbedding（USE_MOCK_EMBED=1，避免下载 367MB 模型）
+开始 / 结束 : 2026-10-20T06:15:45Z  →  2026-10-20T06:18:41Z
+
+----------------------------------------------------------------------
+步骤耗时
+----------------------------------------------------------------------
+步骤                                结论        耗时
+Set up job                        success   1s
+Checkout                          success   1s
+Set up Python                     success   1s
+Install dependencies              success   139s
+Run smoke tests                   success   6s
+Upload allure results             success   1s
+Post Set up Python                success   25s
+Post Checkout                     success   0s
+Complete job                      success   0s
+
+----------------------------------------------------------------------
+测试结果（关键日志原文）
+----------------------------------------------------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.11.17, pytest-9.1.1, pluggy-1.7.0
+rootdir: /home/runner/work/ThinkRAG/ThinkRAG
+configfile: pytest.ini
+=============================== warnings summary ===============================
+====== 10 passed, 1 skipped, 20 deselected, 9 xfailed, 1 warning in 3.98s ======
+(node:2444) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API
+(node:2459) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API
+
+----------------------------------------------------------------------
+结论
+----------------------------------------------------------------------
+1. 全部 9 个步骤 conclusion=success，流水线在托管 runner 上一次通过。
+2. 10 条通过、9 条按预期失败（xfail，对应缺陷）、1 条跳过（PPTX 样本 6.9MB 未入库）。
+3. 冒烟子集 3.98 秒跑完：不需要 GPU、不需要下载模型、不依赖外部 LLM 密钥，
+   这正是用 MockEmbedding 做 CI 的价值——把「解析/切块/计数」这类可确定验证的部分
+   放进流水线，把「语义质量」留给本地真实模型跑。
+4. 与本地差异：本地 10 xfailed（有 pptx 样本），CI 9 xfailed + 1 skipped，属预期差异。

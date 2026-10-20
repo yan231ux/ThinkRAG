@@ -1,0 +1,1407 @@
+﻿2026-10-20T06:15:45.8465139Z Current runner version: '2.337.0'
+2026-10-20T06:15:45.8483201Z ##[group]Runner Image Provisioner
+2026-10-20T06:15:45.8483843Z Hosted Compute Agent
+2026-10-20T06:15:45.8484227Z Version: 20261012.601
+2026-10-20T06:15:45.8484701Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-20T06:15:45.8485232Z Build Date: 2026-10-12T17:48:21Z
+2026-10-20T06:15:45.8485738Z Worker ID: {809094e6-275e-4421-8de0-11a63a8d5eb3}
+2026-10-20T06:15:45.8486217Z Region: centralus
+2026-10-20T06:15:45.8486577Z Cloud: Azure
+2026-10-20T06:15:45.8486973Z ##[endgroup]
+2026-10-20T06:15:45.8487989Z ##[group]Operating System
+2026-10-20T06:15:45.8488804Z Ubuntu
+2026-10-20T06:15:45.8489282Z 24.04.5
+2026-10-20T06:15:45.8489646Z LTS
+2026-10-20T06:15:45.8490172Z ##[endgroup]
+2026-10-20T06:15:45.8490586Z ##[group]Runner Image
+2026-10-20T06:15:45.8491037Z Image: ubuntu-24.04
+2026-10-20T06:15:45.8491433Z Version: 20261012.334.1
+2026-10-20T06:15:45.8492394Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-20T06:15:45.8493547Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-20T06:15:45.8494480Z ##[endgroup]
+2026-10-20T06:15:45.8495323Z ##[group]GITHUB_TOKEN Permissions
+2026-10-20T06:15:45.8497192Z Contents: read
+2026-10-20T06:15:45.8497620Z Metadata: read
+2026-10-20T06:15:45.8498008Z Packages: read
+2026-10-20T06:15:45.8498588Z ##[endgroup]
+2026-10-20T06:15:45.8500161Z Secret source: Actions
+2026-10-20T06:15:45.8500907Z Cache mode: write
+2026-10-20T06:15:45.8501575Z Prepare workflow directory
+2026-10-20T06:15:45.9009761Z Prepare all required actions
+2026-10-20T06:15:45.9046380Z Getting action download info
+2026-10-20T06:15:46.1421874Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-20T06:15:46.2307846Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-20T06:15:46.3299647Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-20T06:15:46.5142443Z Complete job name: pytest smoke (mock embedding)
+2026-10-20T06:15:46.5699069Z ##[group]Run actions/checkout@v4
+2026-10-20T06:15:46.5699723Z with:
+2026-10-20T06:15:46.5700074Z   repository: yan231ux/ThinkRAG
+2026-10-20T06:15:46.5702632Z   token: ***
+2026-10-20T06:15:46.5702985Z   ssh-strict: true
+2026-10-20T06:15:46.5703342Z   ssh-user: git
+2026-10-20T06:15:46.5703754Z   persist-credentials: true
+2026-10-20T06:15:46.5704158Z   clean: true
+2026-10-20T06:15:46.5704540Z   sparse-checkout-cone-mode: true
+2026-10-20T06:15:46.5704987Z   fetch-depth: 1
+2026-10-20T06:15:46.5705364Z   fetch-tags: false
+2026-10-20T06:15:46.5705721Z   show-progress: true
+2026-10-20T06:15:46.5706075Z   lfs: false
+2026-10-20T06:15:46.5706439Z   submodules: false
+2026-10-20T06:15:46.5706800Z   set-safe-directory: true
+2026-10-20T06:15:46.5707244Z   allow-unsafe-pr-checkout: false
+2026-10-20T06:15:46.5707732Z env:
+2026-10-20T06:15:46.5708061Z   USE_MOCK_EMBED: 1
+2026-10-20T06:15:46.5708648Z   THINKRAG_ENV: development
+2026-10-20T06:15:46.5709041Z   PYTHONUTF8: 1
+2026-10-20T06:15:46.5709488Z   PYTHONIOENCODING: utf-8
+2026-10-20T06:15:46.5709865Z ##[endgroup]
+2026-10-20T06:15:46.6470422Z Syncing repository: yan231ux/ThinkRAG
+2026-10-20T06:15:46.6471781Z ##[group]Getting Git version info
+2026-10-20T06:15:46.6472344Z Working directory is '/home/runner/work/ThinkRAG/ThinkRAG'
+2026-10-20T06:15:46.6497134Z [command]/usr/bin/git version
+2026-10-20T06:15:46.6601174Z git version 2.55.0
+2026-10-20T06:15:46.6614032Z ##[endgroup]
+2026-10-20T06:15:46.6625852Z Temporarily overriding HOME='/home/runner/work/_temp/f1bdf12e-f19e-492d-b368-e3f4d4ca16c6' before making global git config changes
+2026-10-20T06:15:46.6627270Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-20T06:15:46.6630952Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ThinkRAG/ThinkRAG
+2026-10-20T06:15:46.6668689Z Deleting the contents of '/home/runner/work/ThinkRAG/ThinkRAG'
+2026-10-20T06:15:46.6672054Z ##[group]Initializing the repository
+2026-10-20T06:15:46.6675221Z [command]/usr/bin/git init /home/runner/work/ThinkRAG/ThinkRAG
+2026-10-20T06:15:46.6755973Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-20T06:15:46.6757188Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-20T06:15:46.6758255Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-20T06:15:46.6759440Z hint: call:
+2026-10-20T06:15:46.6759921Z hint:
+2026-10-20T06:15:46.6760785Z hint: 	git config --global init.defaultBranch <name>
+2026-10-20T06:15:46.6761692Z hint:
+2026-10-20T06:15:46.6762515Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-20T06:15:46.6763694Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-20T06:15:46.6765088Z hint:
+2026-10-20T06:15:46.6765793Z hint: 	git branch -m <name>
+2026-10-20T06:15:46.6766501Z hint:
+2026-10-20T06:15:46.6767333Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-20T06:15:46.6768895Z Initialized empty Git repository in /home/runner/work/ThinkRAG/ThinkRAG/.git/
+2026-10-20T06:15:46.6771483Z [command]/usr/bin/git remote add origin https://github.com/yan231ux/ThinkRAG
+2026-10-20T06:15:46.6806267Z ##[endgroup]
+2026-10-20T06:15:46.6806953Z ##[group]Disabling automatic garbage collection
+2026-10-20T06:15:46.6810409Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-20T06:15:46.6839704Z ##[endgroup]
+2026-10-20T06:15:46.6840418Z ##[group]Setting up auth
+2026-10-20T06:15:46.6846248Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T06:15:46.6872687Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-20T06:15:46.7150888Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T06:15:46.7177770Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-20T06:15:46.7316265Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T06:15:46.7341068Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-20T06:15:46.7484812Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-20T06:15:46.7520589Z ##[endgroup]
+2026-10-20T06:15:46.7521495Z ##[group]Fetching the repository
+2026-10-20T06:15:46.7527532Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +26eda9b81caf7b2d3e8a87999d1ee0aed0c2f9b6:refs/remotes/origin/main
+2026-10-20T06:15:47.5973746Z From https://github.com/yan231ux/ThinkRAG
+2026-10-20T06:15:47.5975243Z  * [new ref]         26eda9b81caf7b2d3e8a87999d1ee0aed0c2f9b6 -> origin/main
+2026-10-20T06:15:47.5978917Z ##[endgroup]
+2026-10-20T06:15:47.5980274Z ##[group]Determining the checkout info
+2026-10-20T06:15:47.5981370Z ##[endgroup]
+2026-10-20T06:15:47.5984262Z [command]/usr/bin/git sparse-checkout disable
+2026-10-20T06:15:47.6141448Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-20T06:15:47.6170810Z ##[group]Checking out the ref
+2026-10-20T06:15:47.6182647Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-20T06:15:47.6480284Z Switched to a new branch 'main'
+2026-10-20T06:15:47.6482727Z branch 'main' set up to track 'origin/main'.
+2026-10-20T06:15:47.6488475Z ##[endgroup]
+2026-10-20T06:15:47.6521657Z [command]/usr/bin/git log -1 --format=%H
+2026-10-20T06:15:47.6539939Z 26eda9b81caf7b2d3e8a87999d1ee0aed0c2f9b6
+2026-10-20T06:15:47.6813606Z ##[group]Run actions/setup-python@v5
+2026-10-20T06:15:47.6814526Z with:
+2026-10-20T06:15:47.6815197Z   python-version: 3.11
+2026-10-20T06:15:47.6815916Z   cache: pip
+2026-10-20T06:15:47.6816679Z   cache-dependency-path: requirements-dev.txt
+2026-10-20T06:15:47.6817723Z   check-latest: false
+2026-10-20T06:15:47.6824014Z   token: ***
+2026-10-20T06:15:47.6824719Z   update-environment: true
+2026-10-20T06:15:47.6825517Z   allow-prereleases: false
+2026-10-20T06:15:47.6826301Z   freethreaded: false
+2026-10-20T06:15:47.6827004Z env:
+2026-10-20T06:15:47.6827616Z   USE_MOCK_EMBED: 1
+2026-10-20T06:15:47.6828385Z   THINKRAG_ENV: development
+2026-10-20T06:15:47.6829202Z   PYTHONUTF8: 1
+2026-10-20T06:15:47.6829908Z   PYTHONIOENCODING: utf-8
+2026-10-20T06:15:47.6830892Z ##[endgroup]
+2026-10-20T06:15:47.7795296Z ##[group]Installed versions
+2026-10-20T06:15:47.7877835Z (node:2089) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-20T06:15:47.7880396Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-20T06:15:47.7881674Z Successfully set up CPython (3.11.17)
+2026-10-20T06:15:47.7883224Z ##[endgroup]
+2026-10-20T06:15:47.8069246Z [command]/opt/hostedtoolcache/Python/3.11.17/x64/bin/pip cache dir
+2026-10-20T06:15:48.0465577Z /home/runner/.cache/pip
+2026-10-20T06:15:48.1945212Z pip cache is not found
+2026-10-20T06:15:48.2062012Z ##[group]Run python -m pip install --upgrade pip
+2026-10-20T06:15:48.2062796Z [36;1mpython -m pip install --upgrade pip[0m
+2026-10-20T06:15:48.2063366Z [36;1mpip install -r requirements-dev.txt[0m
+2026-10-20T06:15:48.2063882Z [36;1mpip install pytest allure-pytest[0m
+2026-10-20T06:15:48.2228739Z shell: /usr/bin/bash -e {0}
+2026-10-20T06:15:48.2229361Z env:
+2026-10-20T06:15:48.2229761Z   USE_MOCK_EMBED: 1
+2026-10-20T06:15:48.2230191Z   THINKRAG_ENV: development
+2026-10-20T06:15:48.2230635Z   PYTHONUTF8: 1
+2026-10-20T06:15:48.2231052Z   PYTHONIOENCODING: utf-8
+2026-10-20T06:15:48.2231524Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-20T06:15:48.2232239Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-20T06:15:48.2232853Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-20T06:15:48.2233405Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-20T06:15:48.2234074Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-20T06:15:48.2234662Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-20T06:15:48.2235175Z ##[endgroup]
+2026-10-20T06:15:48.6506508Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages (26.2.1)
+2026-10-20T06:15:49.1519745Z Collecting llama_index==0.11.19 (from -r requirements-dev.txt (line 1))
+2026-10-20T06:15:49.2185415Z   Downloading llama_index-0.11.19-py3-none-any.whl.metadata (11 kB)
+2026-10-20T06:15:49.2529639Z Collecting streamlit==1.39.0 (from -r requirements-dev.txt (line 2))
+2026-10-20T06:15:49.2643242Z   Downloading streamlit-1.39.0-py2.py3-none-any.whl.metadata (8.5 kB)
+2026-10-20T06:15:49.3223848Z Collecting langchain==0.3.4 (from -r requirements-dev.txt (line 3))
+2026-10-20T06:15:49.3339092Z   Downloading langchain-0.3.4-py3-none-any.whl.metadata (7.1 kB)
+2026-10-20T06:15:49.3585903Z Collecting langchain-community==0.3.3 (from -r requirements-dev.txt (line 4))
+2026-10-20T06:15:49.3707610Z   Downloading langchain_community-0.3.3-py3-none-any.whl.metadata (2.8 kB)
+2026-10-20T06:15:49.3964871Z Collecting langchain_openai==0.2.3 (from -r requirements-dev.txt (line 5))
+2026-10-20T06:15:49.4081684Z   Downloading langchain_openai-0.2.3-py3-none-any.whl.metadata (2.6 kB)
+2026-10-20T06:15:49.4273754Z Collecting ollama==0.3.3 (from -r requirements-dev.txt (line 6))
+2026-10-20T06:15:49.4389383Z   Downloading ollama-0.3.3-py3-none-any.whl.metadata (3.8 kB)
+2026-10-20T06:15:49.4567581Z Collecting llama-index-embeddings-huggingface==0.3.1 (from -r requirements-dev.txt (line 7))
+2026-10-20T06:15:49.4677761Z   Downloading llama_index_embeddings_huggingface-0.3.1-py3-none-any.whl.metadata (718 bytes)
+2026-10-20T06:15:49.4914635Z Collecting llama-index-embeddings-langchain==0.2.1 (from -r requirements-dev.txt (line 8))
+2026-10-20T06:15:49.5024771Z   Downloading llama_index_embeddings_langchain-0.2.1-py3-none-any.whl.metadata (612 bytes)
+2026-10-20T06:15:49.5207274Z Collecting llama-index-llms-langchain==0.4.2 (from -r requirements-dev.txt (line 9))
+2026-10-20T06:15:49.5324588Z   Downloading llama_index_llms_langchain-0.4.2-py3-none-any.whl.metadata (1.4 kB)
+2026-10-20T06:15:49.5523650Z Collecting llama-index-readers-web==0.2.4 (from -r requirements-dev.txt (line 10))
+2026-10-20T06:15:49.5846777Z   Downloading llama_index_readers_web-0.2.4-py3-none-any.whl.metadata (1.2 kB)
+2026-10-20T06:15:49.6042943Z Collecting llama-index-retrievers-bm25==0.4.0 (from -r requirements-dev.txt (line 11))
+2026-10-20T06:15:49.6160204Z   Downloading llama_index_retrievers_bm25-0.4.0-py3-none-any.whl.metadata (742 bytes)
+2026-10-20T06:15:49.6511523Z Collecting llama-index-storage-kvstore-redis==0.2.0 (from -r requirements-dev.txt (line 12))
+2026-10-20T06:15:49.6802213Z   Downloading llama_index_storage_kvstore_redis-0.2.0-py3-none-any.whl.metadata (696 bytes)
+2026-10-20T06:15:49.7205119Z Collecting llama-index-vector-stores-elasticsearch==0.3.3 (from -r requirements-dev.txt (line 13))
+2026-10-20T06:15:49.7317950Z   Downloading llama_index_vector_stores_elasticsearch-0.3.3-py3-none-any.whl.metadata (771 bytes)
+2026-10-20T06:15:49.7692162Z Collecting llama-index-vector-stores-lancedb==0.2.4 (from -r requirements-dev.txt (line 14))
+2026-10-20T06:15:49.7801549Z   Downloading llama_index_vector_stores_lancedb-0.2.4-py3-none-any.whl.metadata (721 bytes)
+2026-10-20T06:15:49.8004084Z Collecting llama-index-llms-ollama==0.3.4 (from -r requirements-dev.txt (line 15))
+2026-10-20T06:15:49.8118127Z   Downloading llama_index_llms_ollama-0.3.4-py3-none-any.whl.metadata (3.8 kB)
+2026-10-20T06:15:49.8667129Z Collecting llama-index-storage-chat_store-redis==0.3.2 (from -r requirements-dev.txt (line 16))
+2026-10-20T06:15:49.8988941Z   Downloading llama_index_storage_chat_store_redis-0.3.2-py3-none-any.whl.metadata (709 bytes)
+2026-10-20T06:15:49.9359288Z Collecting llama_index.storage.docstore.redis==0.2.0 (from -r requirements-dev.txt (line 17))
+2026-10-20T06:15:49.9737003Z   Downloading llama_index_storage_docstore_redis-0.2.0-py3-none-any.whl.metadata (728 bytes)
+2026-10-20T06:15:49.9911948Z Collecting llama_index.storage.index_store.redis==0.3.0 (from -r requirements-dev.txt (line 18))
+2026-10-20T06:15:50.0286231Z   Downloading llama_index_storage_index_store_redis-0.3.0-py3-none-any.whl.metadata (740 bytes)
+2026-10-20T06:15:50.0603940Z Collecting docx2txt==0.8 (from -r requirements-dev.txt (line 19))
+2026-10-20T06:15:50.0710505Z   Downloading docx2txt-0.8.tar.gz (2.8 kB)
+2026-10-20T06:15:50.0761306Z   Installing build dependencies: started
+2026-10-20T06:15:50.7500137Z   Installing build dependencies: finished with status 'done'
+2026-10-20T06:15:50.7505366Z   Getting requirements to build wheel: started
+2026-10-20T06:15:51.0843966Z   Getting requirements to build wheel: finished with status 'done'
+2026-10-20T06:15:51.0850327Z   Preparing metadata (pyproject.toml): started
+2026-10-20T06:15:51.2251837Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-10-20T06:15:51.2438069Z Collecting llama-index-agent-openai<0.4.0,>=0.3.4 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:51.2553982Z   Downloading llama_index_agent_openai-0.3.4-py3-none-any.whl.metadata (728 bytes)
+2026-10-20T06:15:51.2728867Z Collecting llama-index-cli<0.4.0,>=0.3.1 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:51.2837914Z   Downloading llama_index_cli-0.3.1-py3-none-any.whl.metadata (1.5 kB)
+2026-10-20T06:15:51.3175066Z Collecting llama-index-core<0.12.0,>=0.11.19 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:51.3290492Z   Downloading llama_index_core-0.11.23-py3-none-any.whl.metadata (2.5 kB)
+2026-10-20T06:15:51.3627368Z Collecting llama-index-embeddings-openai<0.3.0,>=0.2.4 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:51.3741426Z   Downloading llama_index_embeddings_openai-0.2.5-py3-none-any.whl.metadata (686 bytes)
+2026-10-20T06:15:51.3952388Z Collecting llama-index-indices-managed-llama-cloud>=0.3.0 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:51.4059939Z   Downloading llama_index_indices_managed_llama_cloud-0.12.0-py3-none-any.whl.metadata (3.6 kB)
+2026-10-20T06:15:51.4234388Z Collecting llama-index-legacy<0.10.0,>=0.9.48 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:51.4341676Z   Downloading llama_index_legacy-0.9.48.post4-py3-none-any.whl.metadata (8.5 kB)
+2026-10-20T06:15:51.4631402Z Collecting llama-index-llms-openai<0.3.0,>=0.2.10 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:51.4746365Z   Downloading llama_index_llms_openai-0.2.16-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:15:51.4932993Z Collecting llama-index-multi-modal-llms-openai<0.3.0,>=0.2.0 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:51.5041963Z   Downloading llama_index_multi_modal_llms_openai-0.2.3-py3-none-any.whl.metadata (729 bytes)
+2026-10-20T06:15:51.5432131Z Collecting llama-index-program-openai<0.3.0,>=0.2.0 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:51.5546547Z   Downloading llama_index_program_openai-0.2.0-py3-none-any.whl.metadata (766 bytes)
+2026-10-20T06:15:51.5726107Z Collecting llama-index-question-gen-openai<0.3.0,>=0.2.0 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:51.5834142Z   Downloading llama_index_question_gen_openai-0.2.0-py3-none-any.whl.metadata (785 bytes)
+2026-10-20T06:15:51.6042433Z Collecting llama-index-readers-file<0.3.0,>=0.2.0 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:51.6160170Z   Downloading llama_index_readers_file-0.2.2-py3-none-any.whl.metadata (5.4 kB)
+2026-10-20T06:15:51.6349026Z Collecting llama-index-readers-llama-parse>=0.3.0 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:51.6464766Z   Downloading llama_index_readers_llama_parse-0.7.0-py3-none-any.whl.metadata (3.2 kB)
+2026-10-20T06:15:51.6659210Z Collecting nltk>3.8.1 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:51.6762502Z   Downloading nltk-3.10.3-py3-none-any.whl.metadata (3.2 kB)
+2026-10-20T06:15:51.6980005Z Collecting altair<6,>=4.0 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:51.7081824Z   Downloading altair-5.5.0-py3-none-any.whl.metadata (11 kB)
+2026-10-20T06:15:51.7326808Z Collecting blinker<2,>=1.0.0 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:51.7429268Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+2026-10-20T06:15:51.7635292Z Collecting cachetools<6,>=4.0 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:51.7736702Z   Downloading cachetools-5.5.2-py3-none-any.whl.metadata (5.4 kB)
+2026-10-20T06:15:51.7936302Z Collecting click<9,>=7.0 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:51.8037863Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+2026-10-20T06:15:51.9772399Z Collecting numpy<3,>=1.20 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:51.9879097Z   Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+2026-10-20T06:15:52.0074955Z Collecting packaging<25,>=20 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:52.0175971Z   Downloading packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
+2026-10-20T06:15:52.1062737Z Collecting pandas<3,>=1.4.0 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:52.1164640Z   Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+2026-10-20T06:15:52.2640432Z Collecting pillow<11,>=7.1.0 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:52.2752477Z   Downloading pillow-10.4.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (9.2 kB)
+2026-10-20T06:15:52.4228719Z Collecting protobuf<6,>=3.20 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:52.4337053Z   Downloading protobuf-5.29.6-cp38-abi3-manylinux2014_x86_64.whl.metadata (592 bytes)
+2026-10-20T06:15:52.5057119Z Collecting pyarrow>=7.0 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:52.5165809Z   Downloading pyarrow-26.0.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+2026-10-20T06:15:52.5386816Z Collecting requests<3,>=2.27 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:52.5490561Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-10-20T06:15:52.5770651Z Collecting rich<14,>=10.14.0 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:52.5873207Z   Downloading rich-13.9.4-py3-none-any.whl.metadata (18 kB)
+2026-10-20T06:15:52.6065014Z Collecting tenacity<10,>=8.1.0 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:52.6167361Z   Downloading tenacity-9.2.1-py3-none-any.whl.metadata (1.4 kB)
+2026-10-20T06:15:52.6329440Z Collecting toml<2,>=0.10.1 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:52.6429971Z   Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+2026-10-20T06:15:52.7497018Z Collecting typing-extensions<5,>=4.3.0 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:52.7606912Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:15:52.7831997Z Collecting gitpython!=3.1.19,<4,>=3.0.7 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:52.7933046Z   Downloading gitpython-3.2.1-py3-none-any.whl.metadata (13 kB)
+2026-10-20T06:15:52.8128522Z Collecting pydeck<1,>=0.8.0b4 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:52.8230015Z   Downloading pydeck-0.9.3-py2.py3-none-any.whl.metadata (4.2 kB)
+2026-10-20T06:15:52.8686755Z Collecting tornado<7,>=6.0.3 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:52.8793190Z   Downloading tornado-6.5.10-cp39-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (2.8 kB)
+2026-10-20T06:15:52.9136927Z Collecting watchdog<6,>=2.1.5 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:52.9244776Z   Downloading watchdog-5.0.3-py3-none-manylinux2014_x86_64.whl.metadata (41 kB)
+2026-10-20T06:15:52.9575952Z Collecting PyYAML>=5.3 (from langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:52.9680271Z   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-10-20T06:15:53.1936467Z Collecting SQLAlchemy<3,>=1.4 (from langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:53.2043089Z   Downloading sqlalchemy-2.1.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.7 kB)
+2026-10-20T06:15:53.5478967Z Collecting aiohttp<4.0.0,>=3.8.3 (from langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:53.5590359Z   Downloading aiohttp-3.14.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+2026-10-20T06:15:53.5932016Z Collecting langchain-core<0.4.0,>=0.3.12 (from langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:53.6037048Z   Downloading langchain_core-0.3.86-py3-none-any.whl.metadata (3.2 kB)
+2026-10-20T06:15:53.6222763Z Collecting langchain-text-splitters<0.4.0,>=0.3.0 (from langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:53.6323828Z   Downloading langchain_text_splitters-0.3.11-py3-none-any.whl.metadata (1.8 kB)
+2026-10-20T06:15:53.6770122Z Collecting langsmith<0.2.0,>=0.1.17 (from langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:53.6875826Z   Downloading langsmith-0.1.147-py3-none-any.whl.metadata (14 kB)
+2026-10-20T06:15:53.6927789Z Collecting numpy<3,>=1.20 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:53.7028663Z   Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+2026-10-20T06:15:53.8106915Z Collecting pydantic<3.0.0,>=2.7.4 (from langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:53.8208886Z   Downloading pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+2026-10-20T06:15:53.8495303Z Collecting dataclasses-json<0.7,>=0.5.7 (from langchain-community==0.3.3->-r requirements-dev.txt (line 4))
+2026-10-20T06:15:53.8597702Z   Downloading dataclasses_json-0.6.7-py3-none-any.whl.metadata (25 kB)
+2026-10-20T06:15:53.8826425Z Collecting pydantic-settings<3.0.0,>=2.4.0 (from langchain-community==0.3.3->-r requirements-dev.txt (line 4))
+2026-10-20T06:15:53.8927385Z   Downloading pydantic_settings-2.16.0-py3-none-any.whl.metadata (4.0 kB)
+2026-10-20T06:15:53.9324710Z Collecting openai<2.0.0,>=1.52.0 (from langchain_openai==0.2.3->-r requirements-dev.txt (line 5))
+2026-10-20T06:15:53.9426497Z   Downloading openai-1.109.1-py3-none-any.whl.metadata (29 kB)
+2026-10-20T06:15:53.9958149Z Collecting tiktoken<1,>=0.7 (from langchain_openai==0.2.3->-r requirements-dev.txt (line 5))
+2026-10-20T06:15:54.0060626Z   Downloading tiktoken-0.14.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (6.7 kB)
+2026-10-20T06:15:54.0255742Z Collecting httpx<0.28.0,>=0.27.0 (from ollama==0.3.3->-r requirements-dev.txt (line 6))
+2026-10-20T06:15:54.0357154Z   Downloading httpx-0.27.2-py3-none-any.whl.metadata (7.1 kB)
+2026-10-20T06:15:54.0726289Z Collecting huggingface-hub>=0.19.0 (from huggingface-hub[inference]>=0.19.0->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:15:54.0827315Z   Downloading huggingface_hub-2.2.0-py3-none-any.whl.metadata (16 kB)
+2026-10-20T06:15:54.1096702Z Collecting sentence-transformers>=2.6.1 (from llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:15:54.1206707Z   Downloading sentence_transformers-6.1.0-py3-none-any.whl.metadata (20 kB)
+2026-10-20T06:15:54.1475888Z Collecting beautifulsoup4<5.0.0,>=4.12.3 (from llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:15:54.1582749Z   Downloading beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
+2026-10-20T06:15:54.1985063Z Collecting chromedriver-autoinstaller<0.7.0,>=0.6.3 (from llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:15:54.2091635Z   Downloading chromedriver_autoinstaller-0.6.4-py3-none-any.whl.metadata (2.1 kB)
+2026-10-20T06:15:54.2261257Z Collecting html2text<2025.0.0,>=2024.2.26 (from llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:15:54.2364156Z   Downloading html2text-2024.2.26.tar.gz (56 kB)
+2026-10-20T06:15:54.2582760Z   Installing build dependencies: started
+2026-10-20T06:15:54.6398460Z   Installing build dependencies: finished with status 'done'
+2026-10-20T06:15:54.6403250Z   Getting requirements to build wheel: started
+2026-10-20T06:15:54.8721569Z   Getting requirements to build wheel: finished with status 'done'
+2026-10-20T06:15:54.8728562Z   Preparing metadata (pyproject.toml): started
+2026-10-20T06:15:55.0045661Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-10-20T06:15:55.0210473Z Collecting newspaper3k<0.3.0,>=0.2.8 (from llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:15:55.0319396Z   Downloading newspaper3k-0.2.8-py3-none-any.whl.metadata (11 kB)
+2026-10-20T06:15:55.0648646Z Collecting playwright<2.0,>=1.30 (from llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:15:55.0752127Z   Downloading playwright-1.64.0-py3-none-manylinux1_x86_64.whl.metadata (3.3 kB)
+2026-10-20T06:15:55.1101798Z Collecting selenium<5.0.0,>=4.17.2 (from llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:15:55.1204751Z   Downloading selenium-4.51.0-py3-none-any.whl.metadata (7.4 kB)
+2026-10-20T06:15:55.1408269Z Collecting spider-client<0.0.28,>=0.0.27 (from llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:15:55.1521047Z   Downloading spider-client-0.0.27.tar.gz (5.8 kB)
+2026-10-20T06:15:55.1569521Z   Installing build dependencies: started
+2026-10-20T06:15:55.5069477Z   Installing build dependencies: finished with status 'done'
+2026-10-20T06:15:55.5074615Z   Getting requirements to build wheel: started
+2026-10-20T06:15:55.7259611Z   Getting requirements to build wheel: finished with status 'done'
+2026-10-20T06:15:55.7267058Z   Preparing metadata (pyproject.toml): started
+2026-10-20T06:15:55.8415604Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-10-20T06:15:55.8639856Z Collecting urllib3>=1.1.0 (from llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:15:55.8744580Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+2026-10-20T06:15:55.8955101Z Collecting bm25s<0.3.0,>=0.2.0 (from llama-index-retrievers-bm25==0.4.0->-r requirements-dev.txt (line 11))
+2026-10-20T06:15:55.9068832Z   Downloading bm25s-0.2.14-py3-none-any.whl.metadata (21 kB)
+2026-10-20T06:15:55.9319580Z Collecting pystemmer<3.0.0.0,>=2.2.0.1 (from llama-index-retrievers-bm25==0.4.0->-r requirements-dev.txt (line 11))
+2026-10-20T06:15:55.9428248Z   Downloading PyStemmer-2.2.0.3-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.2 kB)
+2026-10-20T06:15:55.9665944Z Collecting redis<6.0.0,>=5.0.1 (from llama-index-storage-kvstore-redis==0.2.0->-r requirements-dev.txt (line 12))
+2026-10-20T06:15:55.9767438Z   Downloading redis-5.3.1-py3-none-any.whl.metadata (9.2 kB)
+2026-10-20T06:15:56.0061221Z Collecting elasticsearch<9.0.0,>=8.13.1 (from llama-index-vector-stores-elasticsearch==0.3.3->-r requirements-dev.txt (line 13))
+2026-10-20T06:15:56.0162753Z   Downloading elasticsearch-8.19.3-py3-none-any.whl.metadata (9.1 kB)
+2026-10-20T06:15:56.0556277Z Collecting lancedb>=0.13.0 (from llama-index-vector-stores-lancedb==0.2.4->-r requirements-dev.txt (line 14))
+2026-10-20T06:15:56.0671263Z   Downloading lancedb-0.40.0-cp310-abi3-manylinux_2_28_x86_64.whl.metadata (7.5 kB)
+2026-10-20T06:15:56.0957974Z Collecting tantivy (from llama-index-vector-stores-lancedb==0.2.4->-r requirements-dev.txt (line 14))
+2026-10-20T06:15:56.1068698Z   Downloading tantivy-0.26.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.8 kB)
+2026-10-20T06:15:56.1319653Z Collecting aiohappyeyeballs>=2.5.0 (from aiohttp<4.0.0,>=3.8.3->langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:56.1422280Z   Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+2026-10-20T06:15:56.1582789Z Collecting aiosignal>=1.4.0 (from aiohttp<4.0.0,>=3.8.3->langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:56.1686049Z   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+2026-10-20T06:15:56.1876840Z Collecting attrs>=17.3.0 (from aiohttp<4.0.0,>=3.8.3->langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:56.1982063Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+2026-10-20T06:15:56.3190725Z Collecting frozenlist>=1.1.1 (from aiohttp<4.0.0,>=3.8.3->langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:56.3303321Z   Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+2026-10-20T06:15:56.5246005Z Collecting multidict<8.0,>=4.5 (from aiohttp<4.0.0,>=3.8.3->langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:56.5355806Z   Downloading multidict-7.1.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (6.2 kB)
+2026-10-20T06:15:56.5839970Z Collecting propcache>=0.2.0 (from aiohttp<4.0.0,>=3.8.3->langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:56.5944074Z   Downloading propcache-0.5.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (25 kB)
+2026-10-20T06:15:56.8296132Z Collecting yarl<2.0,>=1.25.1 (from aiohttp<4.0.0,>=3.8.3->langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:56.8415245Z   Downloading yarl-1.25.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (111 kB)
+2026-10-20T06:15:56.8665968Z Collecting jinja2 (from altair<6,>=4.0->streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:56.8770678Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-10-20T06:15:56.9000002Z Collecting jsonschema>=3.0 (from altair<6,>=4.0->streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:56.9103955Z   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+2026-10-20T06:15:56.9413778Z Collecting narwhals>=1.14.2 (from altair<6,>=4.0->streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:56.9516042Z   Downloading narwhals-2.27.1-py3-none-any.whl.metadata (15 kB)
+2026-10-20T06:15:56.9880991Z Collecting soupsieve>=1.6.1 (from beautifulsoup4<5.0.0,>=4.12.3->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:15:56.9984384Z   Downloading soupsieve-3.0.3-py3-none-any.whl.metadata (4.4 kB)
+2026-10-20T06:15:57.0879758Z Collecting scipy (from bm25s<0.3.0,>=0.2.0->llama-index-retrievers-bm25==0.4.0->-r requirements-dev.txt (line 11))
+2026-10-20T06:15:57.0983528Z   Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+2026-10-20T06:15:57.1364902Z Collecting marshmallow<4.0.0,>=3.18.0 (from dataclasses-json<0.7,>=0.5.7->langchain-community==0.3.3->-r requirements-dev.txt (line 4))
+2026-10-20T06:15:57.1469253Z   Downloading marshmallow-3.26.2-py3-none-any.whl.metadata (7.3 kB)
+2026-10-20T06:15:57.1689839Z Collecting typing-inspect<1,>=0.4.0 (from dataclasses-json<0.7,>=0.5.7->langchain-community==0.3.3->-r requirements-dev.txt (line 4))
+2026-10-20T06:15:57.1790987Z   Downloading typing_inspect-0.9.0-py3-none-any.whl.metadata (1.5 kB)
+2026-10-20T06:15:57.1979263Z Collecting elastic-transport<9,>=8.15.1 (from elasticsearch<9.0.0,>=8.13.1->llama-index-vector-stores-elasticsearch==0.3.3->-r requirements-dev.txt (line 13))
+2026-10-20T06:15:57.2080992Z   Downloading elastic_transport-8.19.0-py3-none-any.whl.metadata (3.9 kB)
+2026-10-20T06:15:57.3292925Z Collecting python-dateutil (from elasticsearch<9.0.0,>=8.13.1->llama-index-vector-stores-elasticsearch==0.3.3->-r requirements-dev.txt (line 13))
+2026-10-20T06:15:57.3398874Z   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2026-10-20T06:15:57.3655792Z Collecting certifi (from elastic-transport<9,>=8.15.1->elasticsearch<9.0.0,>=8.13.1->llama-index-vector-stores-elasticsearch==0.3.3->-r requirements-dev.txt (line 13))
+2026-10-20T06:15:57.3758085Z   Downloading certifi-2026.10.19-py3-none-any.whl.metadata (2.5 kB)
+2026-10-20T06:15:57.3943775Z Collecting gitdb<5,>=4.0.1 (from gitpython!=3.1.19,<4,>=3.0.7->streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:57.4045957Z   Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+2026-10-20T06:15:57.4214390Z Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython!=3.1.19,<4,>=3.0.7->streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:57.4319249Z   Downloading smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+2026-10-20T06:15:57.4541090Z Collecting anyio (from httpx<0.28.0,>=0.27.0->ollama==0.3.3->-r requirements-dev.txt (line 6))
+2026-10-20T06:15:57.4643755Z   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+2026-10-20T06:15:57.4837485Z Collecting httpcore==1.* (from httpx<0.28.0,>=0.27.0->ollama==0.3.3->-r requirements-dev.txt (line 6))
+2026-10-20T06:15:57.4939938Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-10-20T06:15:57.5122577Z Collecting idna (from httpx<0.28.0,>=0.27.0->ollama==0.3.3->-r requirements-dev.txt (line 6))
+2026-10-20T06:15:57.5225039Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-10-20T06:15:57.5449165Z Collecting sniffio (from httpx<0.28.0,>=0.27.0->ollama==0.3.3->-r requirements-dev.txt (line 6))
+2026-10-20T06:15:57.5550746Z   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+2026-10-20T06:15:57.5717134Z Collecting h11>=0.16 (from httpcore==1.*->httpx<0.28.0,>=0.27.0->ollama==0.3.3->-r requirements-dev.txt (line 6))
+2026-10-20T06:15:57.5818796Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-10-20T06:15:57.5877216Z INFO: pip is looking at multiple versions of langchain-core to determine which version is compatible with other requirements. This could take a while.
+2026-10-20T06:15:57.5881619Z Collecting langchain-core<0.4.0,>=0.3.12 (from langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:57.5995576Z   Downloading langchain_core-0.3.85-py3-none-any.whl.metadata (3.2 kB)
+2026-10-20T06:15:57.6132131Z   Downloading langchain_core-0.3.84-py3-none-any.whl.metadata (3.2 kB)
+2026-10-20T06:15:57.6262271Z   Downloading langchain_core-0.3.83-py3-none-any.whl.metadata (3.2 kB)
+2026-10-20T06:15:57.6391847Z   Downloading langchain_core-0.3.82-py3-none-any.whl.metadata (3.2 kB)
+2026-10-20T06:15:57.6519777Z   Downloading langchain_core-0.3.81-py3-none-any.whl.metadata (3.2 kB)
+2026-10-20T06:15:57.6657619Z   Downloading langchain_core-0.3.80-py3-none-any.whl.metadata (3.2 kB)
+2026-10-20T06:15:57.6797513Z   Downloading langchain_core-0.3.79-py3-none-any.whl.metadata (3.2 kB)
+2026-10-20T06:15:57.6821601Z INFO: pip is still looking at multiple versions of langchain-core to determine which version is compatible with other requirements. This could take a while.
+2026-10-20T06:15:57.6932232Z   Downloading langchain_core-0.3.78-py3-none-any.whl.metadata (3.2 kB)
+2026-10-20T06:15:57.7061676Z   Downloading langchain_core-0.3.77-py3-none-any.whl.metadata (3.2 kB)
+2026-10-20T06:15:57.7372827Z   Downloading langchain_core-0.3.76-py3-none-any.whl.metadata (3.7 kB)
+2026-10-20T06:15:57.7529354Z   Downloading langchain_core-0.3.75-py3-none-any.whl.metadata (5.7 kB)
+2026-10-20T06:15:57.7671283Z   Downloading langchain_core-0.3.74-py3-none-any.whl.metadata (5.8 kB)
+2026-10-20T06:15:57.7698478Z INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
+2026-10-20T06:15:57.7814063Z   Downloading langchain_core-0.3.73-py3-none-any.whl.metadata (5.8 kB)
+2026-10-20T06:15:57.7954398Z   Downloading langchain_core-0.3.72-py3-none-any.whl.metadata (5.8 kB)
+2026-10-20T06:15:57.8086714Z   Downloading langchain_core-0.3.71-py3-none-any.whl.metadata (5.8 kB)
+2026-10-20T06:15:57.8227681Z   Downloading langchain_core-0.3.70-py3-none-any.whl.metadata (5.8 kB)
+2026-10-20T06:15:57.8356097Z   Downloading langchain_core-0.3.69-py3-none-any.whl.metadata (5.8 kB)
+2026-10-20T06:15:57.8484504Z   Downloading langchain_core-0.3.68-py3-none-any.whl.metadata (5.8 kB)
+2026-10-20T06:15:57.8617773Z   Downloading langchain_core-0.3.67-py3-none-any.whl.metadata (5.8 kB)
+2026-10-20T06:15:57.8752921Z   Downloading langchain_core-0.3.66-py3-none-any.whl.metadata (5.8 kB)
+2026-10-20T06:15:57.8905854Z   Downloading langchain_core-0.3.65-py3-none-any.whl.metadata (5.8 kB)
+2026-10-20T06:15:57.9067922Z   Downloading langchain_core-0.3.64-py3-none-any.whl.metadata (5.8 kB)
+2026-10-20T06:15:57.9243284Z   Downloading langchain_core-0.3.63-py3-none-any.whl.metadata (5.8 kB)
+2026-10-20T06:15:57.9443099Z Collecting jsonpatch<2.0,>=1.33 (from langchain-core<0.4.0,>=0.3.12->langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:57.9544451Z   Downloading jsonpatch-1.36-py3-none-any.whl.metadata (3.7 kB)
+2026-10-20T06:15:57.9732614Z Collecting jsonpointer>=3.2 (from jsonpatch<2.0,>=1.33->langchain-core<0.4.0,>=0.3.12->langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:57.9834070Z   Downloading jsonpointer-3.4-py3-none-any.whl.metadata (2.6 kB)
+2026-10-20T06:15:57.9918115Z Collecting langchain-text-splitters<0.4.0,>=0.3.0 (from langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:58.0024690Z   Downloading langchain_text_splitters-0.3.10-py3-none-any.whl.metadata (1.9 kB)
+2026-10-20T06:15:58.2133036Z Collecting orjson<4.0.0,>=3.9.14 (from langsmith<0.2.0,>=0.1.17->langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:58.2238215Z   Downloading orjson-3.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (42 kB)
+2026-10-20T06:15:58.2445580Z Collecting requests-toolbelt<2.0.0,>=1.0.0 (from langsmith<0.2.0,>=0.1.17->langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:58.2546684Z   Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+2026-10-20T06:15:58.2589120Z Requirement already satisfied: pip>=25.2 in /opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages (from langchain-text-splitters<0.4.0,>=0.3.0->langchain==0.3.4->-r requirements-dev.txt (line 3)) (26.2.1)
+2026-10-20T06:15:58.2616819Z Collecting langchain-text-splitters<0.4.0,>=0.3.0 (from langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:15:58.2719820Z   Downloading langchain_text_splitters-0.3.9-py3-none-any.whl.metadata (1.9 kB)
+2026-10-20T06:15:58.3083934Z   Downloading langchain_text_splitters-0.3.8-py3-none-any.whl.metadata (1.9 kB)
+2026-10-20T06:15:58.3443449Z Collecting deprecated>=1.2.9.3 (from llama-index-core<0.12.0,>=0.11.19->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:58.3544578Z   Downloading deprecated-1.3.1-py2.py3-none-any.whl.metadata (5.9 kB)
+2026-10-20T06:15:58.3699118Z Collecting dirtyjson<2.0.0,>=1.0.8 (from llama-index-core<0.12.0,>=0.11.19->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:58.3802931Z   Downloading dirtyjson-1.0.8-py3-none-any.whl.metadata (11 kB)
+2026-10-20T06:15:58.3982862Z Collecting filetype<2.0.0,>=1.2.0 (from llama-index-core<0.12.0,>=0.11.19->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:58.4083586Z   Downloading filetype-1.2.0-py2.py3-none-any.whl.metadata (6.5 kB)
+2026-10-20T06:15:58.4291502Z Collecting fsspec>=2023.5.0 (from llama-index-core<0.12.0,>=0.11.19->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:58.4394451Z   Downloading fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+2026-10-20T06:15:58.4644457Z Collecting nest-asyncio<2.0.0,>=1.5.8 (from llama-index-core<0.12.0,>=0.11.19->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:58.4747249Z   Downloading nest_asyncio-1.6.0-py3-none-any.whl.metadata (2.8 kB)
+2026-10-20T06:15:58.4986562Z Collecting networkx>=3.0 (from llama-index-core<0.12.0,>=0.11.19->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:58.5087123Z   Downloading networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+2026-10-20T06:15:58.5175477Z Collecting tenacity<10,>=8.1.0 (from streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:15:58.5276417Z   Downloading tenacity-8.5.0-py3-none-any.whl.metadata (1.2 kB)
+2026-10-20T06:15:58.5523563Z Collecting tqdm<5.0.0,>=4.66.1 (from llama-index-core<0.12.0,>=0.11.19->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:58.5627046Z   Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+2026-10-20T06:15:58.8405446Z Collecting wrapt (from llama-index-core<0.12.0,>=0.11.19->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:58.8513767Z   Downloading wrapt-2.5.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (7.6 kB)
+2026-10-20T06:15:58.8938834Z Collecting pypdf<5.0.0,>=4.0.1 (from llama-index-readers-file<0.3.0,>=0.2.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:58.9042663Z   Downloading pypdf-4.3.1-py3-none-any.whl.metadata (7.4 kB)
+2026-10-20T06:15:58.9219718Z Collecting striprtf<0.0.27,>=0.0.26 (from llama-index-readers-file<0.3.0,>=0.2.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:15:58.9327487Z   Downloading striprtf-0.0.26-py3-none-any.whl.metadata (2.1 kB)
+2026-10-20T06:15:58.9542233Z Collecting cssselect>=0.9.2 (from newspaper3k<0.3.0,>=0.2.8->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:15:58.9643849Z   Downloading cssselect-1.6.0-py3-none-any.whl.metadata (2.4 kB)
+2026-10-20T06:15:59.1070026Z Collecting lxml>=3.6.0 (from newspaper3k<0.3.0,>=0.2.8->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:15:59.1177764Z   Downloading lxml-6.1.3-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.3 kB)
+2026-10-20T06:15:59.1382528Z Collecting feedparser>=5.2.1 (from newspaper3k<0.3.0,>=0.2.8->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:15:59.1483812Z   Downloading feedparser-6.0.14-py3-none-any.whl.metadata (2.7 kB)
+2026-10-20T06:15:59.1682246Z Collecting tldextract>=2.0.1 (from newspaper3k<0.3.0,>=0.2.8->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:15:59.1784681Z   Downloading tldextract-5.4.0-py3-none-any.whl.metadata (9.2 kB)
+2026-10-20T06:15:59.1952625Z Collecting feedfinder2>=0.0.4 (from newspaper3k<0.3.0,>=0.2.8->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:15:59.2056603Z   Downloading feedfinder2-0.0.4.tar.gz (3.3 kB)
+2026-10-20T06:15:59.2228792Z   Installing build dependencies: started
+2026-10-20T06:15:59.5645838Z   Installing build dependencies: finished with status 'done'
+2026-10-20T06:15:59.5650972Z   Getting requirements to build wheel: started
+2026-10-20T06:15:59.7906252Z   Getting requirements to build wheel: finished with status 'done'
+2026-10-20T06:15:59.7914671Z   Preparing metadata (pyproject.toml): started
+2026-10-20T06:15:59.9278009Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-10-20T06:15:59.9456889Z Collecting jieba3k>=0.35.1 (from newspaper3k<0.3.0,>=0.2.8->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:15:59.9564361Z   Downloading jieba3k-0.35.1.zip (7.4 MB)
+2026-10-20T06:16:00.0585168Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.4/7.4 MB 79.7 MB/s  0:00:00
+2026-10-20T06:16:00.1518684Z   Installing build dependencies: started
+2026-10-20T06:16:00.5175447Z   Installing build dependencies: finished with status 'done'
+2026-10-20T06:16:00.5180016Z   Getting requirements to build wheel: started
+2026-10-20T06:16:00.7308042Z   Getting requirements to build wheel: finished with status 'done'
+2026-10-20T06:16:00.7312997Z   Preparing metadata (pyproject.toml): started
+2026-10-20T06:16:00.8415228Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-10-20T06:16:00.8575006Z Collecting tinysegmenter==0.3 (from newspaper3k<0.3.0,>=0.2.8->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:16:00.8682854Z   Downloading tinysegmenter-0.3.tar.gz (16 kB)
+2026-10-20T06:16:00.8734894Z   Installing build dependencies: started
+2026-10-20T06:16:01.2517007Z   Installing build dependencies: finished with status 'done'
+2026-10-20T06:16:01.2521340Z   Getting requirements to build wheel: started
+2026-10-20T06:16:01.5303143Z   Getting requirements to build wheel: finished with status 'done'
+2026-10-20T06:16:01.5310467Z   Preparing metadata (pyproject.toml): started
+2026-10-20T06:16:01.6373027Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-10-20T06:16:01.6564686Z Collecting distro<2,>=1.7.0 (from openai<2.0.0,>=1.52.0->langchain_openai==0.2.3->-r requirements-dev.txt (line 5))
+2026-10-20T06:16:01.6666991Z   Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+2026-10-20T06:16:01.7277572Z Collecting jiter<1,>=0.4.0 (from openai<2.0.0,>=1.52.0->langchain_openai==0.2.3->-r requirements-dev.txt (line 5))
+2026-10-20T06:16:01.7381397Z   Downloading jiter-0.17.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.2 kB)
+2026-10-20T06:16:01.7788684Z Collecting pytz>=2020.1 (from pandas<3,>=1.4.0->streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:16:01.7889162Z   Downloading pytz-2026.5-py2.py3-none-any.whl.metadata (22 kB)
+2026-10-20T06:16:01.8064291Z Collecting tzdata>=2022.7 (from pandas<3,>=1.4.0->streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:16:01.8165468Z   Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+2026-10-20T06:16:01.8360771Z Collecting pyee<15,>=13 (from playwright<2.0,>=1.30->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:16:01.8461572Z   Downloading pyee-13.0.1-py3-none-any.whl.metadata (3.0 kB)
+2026-10-20T06:16:01.9367981Z Collecting greenlet<4.0.0,>=3.1.1 (from playwright<2.0,>=1.30->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:16:01.9471750Z   Downloading greenlet-3.5.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+2026-10-20T06:16:01.9664384Z Collecting annotated-types>=0.6.0 (from pydantic<3.0.0,>=2.7.4->langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:16:01.9765556Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+2026-10-20T06:16:02.4256909Z Collecting pydantic-core==2.50.1 (from pydantic<3.0.0,>=2.7.4->langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:16:02.4366273Z   Downloading pydantic_core-2.50.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+2026-10-20T06:16:02.4534648Z Collecting typing-inspection>=0.4.4 (from pydantic<3.0.0,>=2.7.4->langchain==0.3.4->-r requirements-dev.txt (line 3))
+2026-10-20T06:16:02.4636785Z   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+2026-10-20T06:16:02.4838576Z Collecting python-dotenv>=1.2.2 (from pydantic-settings<3.0.0,>=2.4.0->langchain-community==0.3.3->-r requirements-dev.txt (line 4))
+2026-10-20T06:16:02.4940033Z   Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+2026-10-20T06:16:02.5209722Z Collecting PyJWT>=2.9.0 (from redis<6.0.0,>=5.0.1->llama-index-storage-kvstore-redis==0.2.0->-r requirements-dev.txt (line 12))
+2026-10-20T06:16:02.5310076Z   Downloading pyjwt-2.15.1-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:02.6866241Z Collecting charset_normalizer<4,>=2 (from requests<3,>=2.27->streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:16:02.6972976Z   Downloading charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+2026-10-20T06:16:02.7270406Z Collecting markdown-it-py>=2.2.0 (from rich<14,>=10.14.0->streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:16:02.7373988Z   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+2026-10-20T06:16:02.7592129Z Collecting pygments<3.0.0,>=2.13.0 (from rich<14,>=10.14.0->streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:16:02.7695331Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-10-20T06:16:02.7941354Z Collecting trio<1.0,>=0.31.0 (from selenium<5.0.0,>=4.17.2->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:16:02.8046304Z   Downloading trio-0.34.0-py3-none-any.whl.metadata (8.5 kB)
+2026-10-20T06:16:02.8473648Z Collecting trio-websocket<1.0,>=0.12.2 (from selenium<5.0.0,>=4.17.2->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:16:02.8582114Z   Downloading trio_websocket-0.12.2-py3-none-any.whl.metadata (5.1 kB)
+2026-10-20T06:16:02.8809941Z Collecting websocket-client<2.0,>=1.8.0 (from selenium<5.0.0,>=4.17.2->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:16:02.8913900Z   Downloading websocket_client-1.9.2-py3-none-any.whl.metadata (8.3 kB)
+2026-10-20T06:16:03.1288108Z Collecting regex (from tiktoken<1,>=0.7->langchain_openai==0.2.3->-r requirements-dev.txt (line 5))
+2026-10-20T06:16:03.1398823Z   Downloading regex-2026.9.29-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+2026-10-20T06:16:03.1630761Z Collecting sortedcontainers (from trio<1.0,>=0.31.0->selenium<5.0.0,>=4.17.2->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:16:03.1734224Z   Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+2026-10-20T06:16:03.1922949Z Collecting outcome (from trio<1.0,>=0.31.0->selenium<5.0.0,>=4.17.2->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:16:03.2024671Z   Downloading outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+2026-10-20T06:16:03.2216783Z Collecting wsproto>=0.14 (from trio-websocket<1.0,>=0.12.2->selenium<5.0.0,>=4.17.2->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:16:03.2317658Z   Downloading wsproto-1.3.2-py3-none-any.whl.metadata (5.2 kB)
+2026-10-20T06:16:03.2498774Z Collecting mypy-extensions>=0.3.0 (from typing-inspect<1,>=0.4.0->dataclasses-json<0.7,>=0.5.7->langchain-community==0.3.3->-r requirements-dev.txt (line 4))
+2026-10-20T06:16:03.2600416Z   Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+2026-10-20T06:16:03.2794711Z Collecting pysocks!=1.5.7,<2.0,>=1.5.6 (from urllib3[socks]<3.0,>=2.6.3->selenium<5.0.0,>=4.17.2->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:16:03.2895531Z   Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+2026-10-20T06:16:03.3237421Z Collecting six (from feedfinder2>=0.0.4->newspaper3k<0.3.0,>=0.2.8->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:16:03.3341038Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-10-20T06:16:03.3518979Z Collecting feedparser-sgmllib<3,>=2 (from feedparser>=5.2.1->newspaper3k<0.3.0,>=0.2.8->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:16:03.3621516Z   Downloading feedparser_sgmllib-2.1.0-py3-none-any.whl.metadata (926 bytes)
+2026-10-20T06:16:03.4002421Z Collecting filelock>=3.10.0 (from huggingface-hub>=0.19.0->huggingface-hub[inference]>=0.19.0->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:03.4104290Z   Downloading filelock-4.2.4-py3-none-any.whl.metadata (2.0 kB)
+2026-10-20T06:16:03.4442530Z Collecting hf-xet<2.0.0,>=1.6.0 (from huggingface-hub>=0.19.0->huggingface-hub[inference]>=0.19.0->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:03.4545276Z   Downloading hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+2026-10-20T06:16:03.4715695Z Collecting httpx2<3,>=2.0.0 (from huggingface-hub>=0.19.0->huggingface-hub[inference]>=0.19.0->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:03.4817890Z   Downloading httpx2-2.15.1-py3-none-any.whl.metadata (9.6 kB)
+2026-10-20T06:16:03.5062380Z Collecting httpcore2==2.15.1 (from httpx2<3,>=2.0.0->huggingface-hub>=0.19.0->huggingface-hub[inference]>=0.19.0->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:03.5163330Z   Downloading httpcore2-2.15.1-py3-none-any.whl.metadata (27 kB)
+2026-10-20T06:16:03.5353382Z Collecting truststore>=0.10 (from httpx2<3,>=2.0.0->huggingface-hub>=0.19.0->huggingface-hub[inference]>=0.19.0->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:03.5455372Z   Downloading truststore-0.10.5-py3-none-any.whl.metadata (4.5 kB)
+2026-10-20T06:16:03.5656072Z WARNING: huggingface-hub 2.2.0 does not provide the extra 'inference'
+2026-10-20T06:16:03.6094968Z Collecting MarkupSafe>=2.0 (from jinja2->altair<6,>=4.0->streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:16:03.6197705Z   Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-10-20T06:16:03.6392212Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=3.0->altair<6,>=4.0->streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:16:03.6493976Z   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+2026-10-20T06:16:03.6702281Z Collecting referencing>=0.28.4 (from jsonschema>=3.0->altair<6,>=4.0->streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:16:03.6803906Z   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+2026-10-20T06:16:03.9219526Z Collecting rpds-py>=0.25.0 (from jsonschema>=3.0->altair<6,>=4.0->streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:16:03.9329721Z   Downloading rpds_py-2026.9.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+2026-10-20T06:16:03.9556384Z Collecting deprecation>=2.1.0 (from lancedb>=0.13.0->llama-index-vector-stores-lancedb==0.2.4->-r requirements-dev.txt (line 14))
+2026-10-20T06:16:03.9659035Z   Downloading deprecation-2.1.0-py2.py3-none-any.whl.metadata (4.6 kB)
+2026-10-20T06:16:03.9867139Z Collecting overrides>=0.7 (from lancedb>=0.13.0->llama-index-vector-stores-lancedb==0.2.4->-r requirements-dev.txt (line 14))
+2026-10-20T06:16:03.9970990Z   Downloading overrides-7.7.0-py3-none-any.whl.metadata (5.8 kB)
+2026-10-20T06:16:04.0195359Z Collecting lance-namespace>=0.3.2 (from lancedb>=0.13.0->llama-index-vector-stores-lancedb==0.2.4->-r requirements-dev.txt (line 14))
+2026-10-20T06:16:04.0297016Z   Downloading lance_namespace-0.13.0-py3-none-any.whl.metadata (1.6 kB)
+2026-10-20T06:16:04.0514057Z Collecting lance-namespace-urllib3-client==0.13.0 (from lance-namespace>=0.3.2->lancedb>=0.13.0->llama-index-vector-stores-lancedb==0.2.4->-r requirements-dev.txt (line 14))
+2026-10-20T06:16:04.0615872Z   Downloading lance_namespace_urllib3_client-0.13.0-py3-none-any.whl.metadata (31 kB)
+2026-10-20T06:16:04.0912752Z Collecting llama-cloud<2,>=1.6.0 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.1022102Z   Downloading llama_cloud-1.6.0-py3-none-any.whl.metadata (7.1 kB)
+2026-10-20T06:16:04.1073001Z INFO: pip is looking at multiple versions of llama-index-indices-managed-llama-cloud to determine which version is compatible with other requirements. This could take a while.
+2026-10-20T06:16:04.1082623Z Collecting llama-index-indices-managed-llama-cloud>=0.3.0 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.1204758Z   Downloading llama_index_indices_managed_llama_cloud-0.11.1-py3-none-any.whl.metadata (3.6 kB)
+2026-10-20T06:16:04.1444997Z   Downloading llama_index_indices_managed_llama_cloud-0.11.0-py3-none-any.whl.metadata (3.7 kB)
+2026-10-20T06:16:04.1619622Z   Downloading llama_index_indices_managed_llama_cloud-0.10.0-py3-none-any.whl.metadata (3.7 kB)
+2026-10-20T06:16:04.1652477Z Collecting deprecated>=1.2.9.3 (from llama-index-core<0.12.0,>=0.11.19->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.1758716Z   Downloading Deprecated-1.2.18-py2.py3-none-any.whl.metadata (5.7 kB)
+2026-10-20T06:16:04.1794193Z Collecting llama-cloud==0.1.35 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.1903867Z   Downloading llama_cloud-0.1.35-py3-none-any.whl.metadata (1.2 kB)
+2026-10-20T06:16:04.1934562Z Collecting llama-index-indices-managed-llama-cloud>=0.3.0 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.2051308Z   Downloading llama_index_indices_managed_llama_cloud-0.9.4-py3-none-any.whl.metadata (3.7 kB)
+2026-10-20T06:16:04.2196479Z   Downloading llama_index_indices_managed_llama_cloud-0.9.3-py3-none-any.whl.metadata (3.7 kB)
+2026-10-20T06:16:04.2351136Z   Downloading llama_index_indices_managed_llama_cloud-0.9.2-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:04.2496298Z   Downloading llama_index_indices_managed_llama_cloud-0.9.1-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:04.2524178Z INFO: pip is still looking at multiple versions of llama-index-indices-managed-llama-cloud to determine which version is compatible with other requirements. This could take a while.
+2026-10-20T06:16:04.2634510Z   Downloading llama_index_indices_managed_llama_cloud-0.9.0-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:04.2776250Z   Downloading llama_index_indices_managed_llama_cloud-0.8.0-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:04.2924589Z   Downloading llama_index_indices_managed_llama_cloud-0.7.10-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:04.2954835Z Collecting llama-cloud==0.1.32 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.3071496Z   Downloading llama_cloud-0.1.32-py3-none-any.whl.metadata (1.2 kB)
+2026-10-20T06:16:04.3257174Z Collecting llama-index-indices-managed-llama-cloud>=0.3.0 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.3363406Z   Downloading llama_index_indices_managed_llama_cloud-0.7.9-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:04.3393527Z Collecting llama-cloud==0.1.30 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.3500333Z   Downloading llama_cloud-0.1.30-py3-none-any.whl.metadata (1.2 kB)
+2026-10-20T06:16:04.3527985Z Collecting llama-index-indices-managed-llama-cloud>=0.3.0 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.3640709Z   Downloading llama_index_indices_managed_llama_cloud-0.7.8-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:04.3668477Z INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
+2026-10-20T06:16:04.3777000Z   Downloading llama_index_indices_managed_llama_cloud-0.7.7-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:04.3808181Z Collecting llama-cloud==0.1.26 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.3913991Z   Downloading llama_cloud-0.1.26-py3-none-any.whl.metadata (1.2 kB)
+2026-10-20T06:16:04.3941632Z Collecting llama-index-indices-managed-llama-cloud>=0.3.0 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.4057266Z   Downloading llama_index_indices_managed_llama_cloud-0.7.6-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:04.4199802Z   Downloading llama_index_indices_managed_llama_cloud-0.7.5-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:04.4231668Z Collecting llama-cloud==0.1.25 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.4342516Z   Downloading llama_cloud-0.1.25-py3-none-any.whl.metadata (1.1 kB)
+2026-10-20T06:16:04.4369470Z Collecting llama-index-indices-managed-llama-cloud>=0.3.0 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.4484250Z   Downloading llama_index_indices_managed_llama_cloud-0.7.4-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:04.4518266Z Collecting llama-cloud==0.1.23 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.4628664Z   Downloading llama_cloud-0.1.23-py3-none-any.whl.metadata (1.1 kB)
+2026-10-20T06:16:04.4658019Z Collecting llama-index-indices-managed-llama-cloud>=0.3.0 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.4764074Z   Downloading llama_index_indices_managed_llama_cloud-0.7.3-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:04.4898817Z   Downloading llama_index_indices_managed_llama_cloud-0.7.2-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:04.5045535Z   Downloading llama_index_indices_managed_llama_cloud-0.7.1-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:04.5262061Z   Downloading llama_index_indices_managed_llama_cloud-0.7.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:04.5295549Z Collecting llama-cloud==0.1.21 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.5408073Z   Downloading llama_cloud-0.1.21-py3-none-any.whl.metadata (1.2 kB)
+2026-10-20T06:16:04.5436667Z Collecting llama-index-indices-managed-llama-cloud>=0.3.0 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.5545530Z   Downloading llama_index_indices_managed_llama_cloud-0.6.11-py3-none-any.whl.metadata (3.6 kB)
+2026-10-20T06:16:04.5588653Z Collecting llama-cloud<0.2.0,>=0.1.13 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.5702934Z   Downloading llama_cloud-0.1.46-py3-none-any.whl.metadata (2.7 kB)
+2026-10-20T06:16:04.5733698Z Collecting llama-index-indices-managed-llama-cloud>=0.3.0 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.5845935Z   Downloading llama_index_indices_managed_llama_cloud-0.6.10-py3-none-any.whl.metadata (3.6 kB)
+2026-10-20T06:16:04.5988537Z   Downloading llama_index_indices_managed_llama_cloud-0.6.9-py3-none-any.whl.metadata (3.6 kB)
+2026-10-20T06:16:04.6133109Z   Downloading llama_index_indices_managed_llama_cloud-0.6.8-py3-none-any.whl.metadata (3.6 kB)
+2026-10-20T06:16:04.6269529Z   Downloading llama_index_indices_managed_llama_cloud-0.6.7-py3-none-any.whl.metadata (3.6 kB)
+2026-10-20T06:16:04.6420203Z   Downloading llama_index_indices_managed_llama_cloud-0.6.6-py3-none-any.whl.metadata (3.6 kB)
+2026-10-20T06:16:04.6555865Z   Downloading llama_index_indices_managed_llama_cloud-0.6.5-py3-none-any.whl.metadata (3.6 kB)
+2026-10-20T06:16:04.6691939Z   Downloading llama_index_indices_managed_llama_cloud-0.6.4-py3-none-any.whl.metadata (3.6 kB)
+2026-10-20T06:16:04.6829214Z   Downloading llama_index_indices_managed_llama_cloud-0.6.3-py3-none-any.whl.metadata (3.8 kB)
+2026-10-20T06:16:04.6877756Z Collecting llama-cloud>=0.1.5 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.6992933Z   Downloading llama_cloud-2.18.0-py3-none-any.whl.metadata (18 kB)
+2026-10-20T06:16:04.7050735Z Collecting llama-index-indices-managed-llama-cloud>=0.3.0 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.7165295Z   Downloading llama_index_indices_managed_llama_cloud-0.6.2-py3-none-any.whl.metadata (3.8 kB)
+2026-10-20T06:16:04.7305693Z   Downloading llama_index_indices_managed_llama_cloud-0.6.1-py3-none-any.whl.metadata (3.8 kB)
+2026-10-20T06:16:04.7453840Z   Downloading llama_index_indices_managed_llama_cloud-0.6.0-py3-none-any.whl.metadata (3.8 kB)
+2026-10-20T06:16:04.7547765Z INFO: pip is looking at multiple versions of llama-index-readers-llama-parse to determine which version is compatible with other requirements. This could take a while.
+2026-10-20T06:16:04.7552436Z Collecting llama-index-readers-llama-parse>=0.3.0 (from llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.7668240Z   Downloading llama_index_readers_llama_parse-0.6.1-py3-none-any.whl.metadata (3.2 kB)
+2026-10-20T06:16:04.7801845Z   Downloading llama_index_readers_llama_parse-0.6.0-py3-none-any.whl.metadata (3.1 kB)
+2026-10-20T06:16:04.7945080Z   Downloading llama_index_readers_llama_parse-0.5.1-py3-none-any.whl.metadata (3.1 kB)
+2026-10-20T06:16:04.8079049Z   Downloading llama_index_readers_llama_parse-0.5.0-py3-none-any.whl.metadata (3.1 kB)
+2026-10-20T06:16:04.8233820Z   Downloading llama_index_readers_llama_parse-0.4.0-py3-none-any.whl.metadata (3.6 kB)
+2026-10-20T06:16:04.8394657Z   Downloading llama_index_readers_llama_parse-0.3.0-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:04.8646473Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.8748928Z   Downloading llama_parse-0.6.94-py3-none-any.whl.metadata (7.1 kB)
+2026-10-20T06:16:04.9047773Z Collecting llama-cloud-services>=0.6.94 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.9151225Z   Downloading llama_cloud_services-0.6.94-py3-none-any.whl.metadata (3.8 kB)
+2026-10-20T06:16:04.9216578Z INFO: pip is looking at multiple versions of llama-cloud-services to determine which version is compatible with other requirements. This could take a while.
+2026-10-20T06:16:04.9225238Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.9338918Z   Downloading llama_parse-0.6.93-py3-none-any.whl.metadata (7.1 kB)
+2026-10-20T06:16:04.9398876Z Collecting llama-cloud-services>=0.6.93 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.9506178Z   Downloading llama_cloud_services-0.6.93-py3-none-any.whl.metadata (3.8 kB)
+2026-10-20T06:16:04.9542968Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.9656455Z   Downloading llama_parse-0.6.92-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:04.9714973Z Collecting llama-cloud-services>=0.6.92 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.9827500Z   Downloading llama_cloud_services-0.6.92-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:04.9864128Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:04.9971890Z   Downloading llama_parse-0.6.91-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.0030732Z INFO: pip is still looking at multiple versions of llama-cloud-services to determine which version is compatible with other requirements. This could take a while.
+2026-10-20T06:16:05.0041739Z Collecting llama-cloud-services>=0.6.91 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.0147752Z   Downloading llama_cloud_services-0.6.91-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.0185421Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.0292131Z   Downloading llama_parse-0.6.90-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.0361855Z INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
+2026-10-20T06:16:05.0372992Z Collecting llama-cloud-services>=0.6.90 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.0481034Z   Downloading llama_cloud_services-0.6.90-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.0519713Z Collecting llama-cloud>=0.1.5 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.0633343Z   Downloading llama_cloud-0.1.45-py3-none-any.whl.metadata (2.7 kB)
+2026-10-20T06:16:05.0739084Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.0852412Z   Downloading llama_parse-0.6.89-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.0935210Z Collecting llama-cloud-services>=0.6.89 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.1049184Z   Downloading llama_cloud_services-0.6.89-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.1093993Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.1196925Z   Downloading llama_parse-0.6.88-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.1288844Z Collecting llama-cloud-services>=0.6.88 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.1399396Z   Downloading llama_cloud_services-0.6.88-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.1444697Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.1559205Z   Downloading llama_parse-0.6.87-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.1658887Z Collecting llama-cloud-services>=0.6.87 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.1794263Z   Downloading llama_cloud_services-0.6.87-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.1843734Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.1952102Z   Downloading llama_parse-0.6.86-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.2052877Z Collecting llama-cloud-services>=0.6.86 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.2169550Z   Downloading llama_cloud_services-0.6.86-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.2215145Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.2325875Z   Downloading llama_parse-0.6.85-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.2473143Z Collecting llama-cloud-services>=0.6.85 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.2589546Z   Downloading llama_cloud_services-0.6.85-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.2629726Z Collecting llama-cloud>=0.1.5 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.2740367Z   Downloading llama_cloud-0.1.44-py3-none-any.whl.metadata (2.7 kB)
+2026-10-20T06:16:05.2776713Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.2892981Z   Downloading llama_parse-0.6.84-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.3011875Z Collecting llama-cloud-services>=0.6.84 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.3123030Z   Downloading llama_cloud_services-0.6.84-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.3159499Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.3273159Z   Downloading llama_parse-0.6.83-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.3384117Z Collecting llama-cloud-services>=0.6.82 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.3490317Z   Downloading llama_cloud_services-0.6.83-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.3629604Z   Downloading llama_cloud_services-0.6.82-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.3671592Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.3777924Z   Downloading llama_parse-0.6.82-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.4002593Z   Downloading llama_parse-0.6.81-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.4119632Z Collecting llama-cloud-services>=0.6.81 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.4254207Z   Downloading llama_cloud_services-0.6.81-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.4335193Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.4447793Z   Downloading llama_parse-0.6.80-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.4572072Z Collecting llama-cloud-services>=0.6.80 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.4706387Z   Downloading llama_cloud_services-0.6.80-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.4743440Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.4849816Z   Downloading llama_parse-0.6.79-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.4978142Z Collecting llama-cloud-services>=0.6.79 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.5096705Z   Downloading llama_cloud_services-0.6.79-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.5243265Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.5353465Z   Downloading llama_parse-0.6.78-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.5487257Z Collecting llama-cloud-services>=0.6.78 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.5604396Z   Downloading llama_cloud_services-0.6.78-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.5641463Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.5746317Z   Downloading llama_parse-0.6.77-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.5881519Z Collecting llama-cloud-services>=0.6.77 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.5987342Z   Downloading llama_cloud_services-0.6.77-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.6223780Z Collecting llama-cloud>=0.1.5 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.6337405Z   Downloading llama_cloud-0.1.43-py3-none-any.whl.metadata (2.7 kB)
+2026-10-20T06:16:05.6372891Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.6480610Z   Downloading llama_parse-0.6.76-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.6629689Z Collecting llama-cloud-services>=0.6.76 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.6736694Z   Downloading llama_cloud_services-0.6.76-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.6774414Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.6880570Z   Downloading llama_parse-0.6.75-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.7033032Z Collecting llama-cloud-services>=0.6.75 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.7140881Z   Downloading llama_cloud_services-0.6.75-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.7178249Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.7282684Z   Downloading llama_parse-0.6.74-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.7449075Z Collecting llama-cloud-services>=0.6.74 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.7555257Z   Downloading llama_cloud_services-0.6.74-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.7593153Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.7706072Z   Downloading llama_parse-0.6.73-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.7864066Z Collecting llama-cloud-services>=0.6.73 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.7983410Z   Downloading llama_cloud_services-0.6.73-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.8143205Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.8256120Z   Downloading llama_parse-0.6.72-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.8420611Z Collecting llama-cloud-services>=0.6.72 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.8534009Z   Downloading llama_cloud_services-0.6.72-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.8570308Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.8675048Z   Downloading llama_parse-0.6.71-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.8846574Z Collecting llama-cloud-services>=0.6.71 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.8955024Z   Downloading llama_cloud_services-0.6.71-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.8992583Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.9110469Z   Downloading llama_parse-0.6.70-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.9283766Z Collecting llama-cloud-services>=0.6.70 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.9397746Z   Downloading llama_cloud_services-0.6.70-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:05.9434192Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.9546994Z   Downloading llama_parse-0.6.69-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:05.9725316Z Collecting llama-cloud-services>=0.6.69 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:05.9831948Z   Downloading llama_cloud_services-0.6.69-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:06.0029675Z Collecting llama-cloud>=0.1.5 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.0148467Z   Downloading llama_cloud-0.1.42-py3-none-any.whl.metadata (2.7 kB)
+2026-10-20T06:16:06.0184975Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.0291895Z   Downloading llama_parse-0.6.68-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:06.0482430Z Collecting llama-cloud-services>=0.6.68 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.0590529Z   Downloading llama_cloud_services-0.6.68-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:06.0627402Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.0743466Z   Downloading llama_parse-0.6.67-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:06.0933647Z Collecting llama-cloud-services>=0.6.67 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.1043660Z   Downloading llama_cloud_services-0.6.67-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:06.1078950Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.1186474Z   Downloading llama_parse-0.6.66-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:06.1382583Z Collecting llama-cloud-services>=0.6.66 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.1494866Z   Downloading llama_cloud_services-0.6.66-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:06.1528914Z Collecting llama-cloud>=0.1.5 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.1643255Z   Downloading llama_cloud-0.1.41-py3-none-any.whl.metadata (2.7 kB)
+2026-10-20T06:16:06.1675158Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.1817314Z   Downloading llama_parse-0.6.65-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:06.2091838Z Collecting llama-cloud-services>=0.6.64 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.2205037Z   Downloading llama_cloud_services-0.6.65-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:06.2340767Z   Downloading llama_cloud_services-0.6.64-py3-none-any.whl.metadata (3.3 kB)
+2026-10-20T06:16:06.2377182Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.2486825Z   Downloading llama_parse-0.6.64-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:06.2801947Z   Downloading llama_parse-0.6.63-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:06.3013943Z Collecting llama-cloud-services>=0.6.63 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.3129487Z   Downloading llama_cloud_services-0.6.63-py3-none-any.whl.metadata (3.7 kB)
+2026-10-20T06:16:06.3165282Z Collecting llama-cloud>=0.1.5 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.3278900Z   Downloading llama_cloud-0.1.37-py3-none-any.whl.metadata (1.2 kB)
+2026-10-20T06:16:06.3312945Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.3429187Z   Downloading llama_parse-0.6.62-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:06.3644407Z Collecting llama-cloud-services>=0.6.62 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.3756570Z   Downloading llama_cloud_services-0.6.62-py3-none-any.whl.metadata (3.7 kB)
+2026-10-20T06:16:06.3825702Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.3932324Z   Downloading llama_parse-0.6.60-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:06.4154216Z Collecting llama-cloud-services>=0.6.60 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.4270122Z   Downloading llama_cloud_services-0.6.60-py3-none-any.whl.metadata (3.7 kB)
+2026-10-20T06:16:06.4310483Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.4417287Z   Downloading llama_parse-0.6.59-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:06.4644595Z Collecting llama-cloud-services>=0.6.59 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.4752435Z   Downloading llama_cloud_services-0.6.59-py3-none-any.whl.metadata (3.7 kB)
+2026-10-20T06:16:06.4790862Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.4903942Z   Downloading llama_parse-0.6.58-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:06.5133815Z Collecting llama-cloud-services>=0.6.58 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.5246625Z   Downloading llama_cloud_services-0.6.58-py3-none-any.whl.metadata (3.7 kB)
+2026-10-20T06:16:06.5284744Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.5398101Z   Downloading llama_parse-0.6.57-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:06.5634795Z Collecting llama-cloud-services>=0.6.56 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.5750678Z   Downloading llama_cloud_services-0.6.57-py3-none-any.whl.metadata (3.7 kB)
+2026-10-20T06:16:06.5889261Z   Downloading llama_cloud_services-0.6.56-py3-none-any.whl.metadata (3.7 kB)
+2026-10-20T06:16:06.5926880Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.6041467Z   Downloading llama_parse-0.6.56-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:06.6395720Z   Downloading llama_parse-0.6.55-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:06.6647215Z Collecting llama-cloud-services>=0.6.55 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.6754209Z   Downloading llama_cloud_services-0.6.55-py3-none-any.whl.metadata (3.7 kB)
+2026-10-20T06:16:06.6791951Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.6899118Z   Downloading llama_parse-0.6.54-py3-none-any.whl.metadata (6.6 kB)
+2026-10-20T06:16:06.7153268Z Collecting llama-cloud-services>=0.6.54 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.7262203Z   Downloading llama_cloud_services-0.6.54-py3-none-any.whl.metadata (3.6 kB)
+2026-10-20T06:16:06.7307515Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.7415714Z   Downloading llama_parse-0.6.53-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:06.7679562Z Collecting llama-cloud-services>=0.6.53 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.7794524Z   Downloading llama_cloud_services-0.6.53-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:06.7834842Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.7940880Z   Downloading llama_parse-0.6.52-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:06.8202877Z Collecting llama-cloud-services>=0.6.52 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.8345075Z   Downloading llama_cloud_services-0.6.52-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:06.8383358Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.8485081Z   Downloading llama_parse-0.6.51-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:06.8752419Z Collecting llama-cloud-services>=0.6.51 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.8860625Z   Downloading llama_cloud_services-0.6.51-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:06.8894260Z Collecting llama-cloud>=0.1.5 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.9007905Z   Downloading llama_cloud-0.1.34-py3-none-any.whl.metadata (1.2 kB)
+2026-10-20T06:16:06.9041365Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:06.9156273Z   Downloading llama_parse-0.6.50-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:07.0196644Z Collecting llama-cloud-services>=0.6.49 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:07.0307882Z   Downloading llama_cloud_services-0.6.50-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:07.0746015Z   Downloading llama_cloud_services-0.6.49-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:07.1144577Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:07.1260558Z   Downloading llama_parse-0.6.49-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:07.1898539Z   Downloading llama_parse-0.6.48-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:07.2706974Z Collecting llama-cloud-services>=0.6.48 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:07.2830486Z   Downloading llama_cloud_services-0.6.48-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:07.3038752Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:07.3154360Z   Downloading llama_parse-0.6.47-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:07.3633811Z Collecting llama-cloud-services>=0.6.47 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:07.3746243Z   Downloading llama_cloud_services-0.6.47-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:07.6646671Z Collecting llama-cloud>=0.1.5 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:07.6758109Z   Downloading llama_cloud-0.1.33-py3-none-any.whl.metadata (1.2 kB)
+2026-10-20T06:16:07.7350856Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:07.7463091Z   Downloading llama_parse-0.6.46-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:07.8220561Z Collecting llama-cloud-services>=0.6.45 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:07.8338530Z   Downloading llama_cloud_services-0.6.46-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:07.9161590Z   Downloading llama_cloud_services-0.6.45-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:08.0259938Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:08.0366027Z   Downloading llama_parse-0.6.45-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:08.1537713Z   Downloading llama_parse-0.6.44-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:08.2084982Z Collecting llama-cloud-services>=0.6.44 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:08.2199241Z   Downloading llama_cloud_services-0.6.44-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:08.2353502Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:08.2463090Z   Downloading llama_parse-0.6.43-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:08.2929393Z Collecting llama-cloud-services>=0.6.43 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:08.3039801Z   Downloading llama_cloud_services-0.6.43-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:08.5489442Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:08.5609649Z   Downloading llama_parse-0.6.42-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:08.8450065Z Collecting llama-cloud-services>=0.6.42 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:08.8565452Z   Downloading llama_cloud_services-0.6.42-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:08.9969614Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:09.0087212Z   Downloading llama_parse-0.6.41-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:09.4369532Z Collecting llama-cloud-services>=0.6.41 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:09.4479461Z   Downloading llama_cloud_services-0.6.41-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:09.7993040Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:09.8105084Z   Downloading llama_parse-0.6.40-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:10.2082268Z Collecting llama-cloud-services>=0.6.40 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:10.2199619Z   Downloading llama_cloud_services-0.6.40-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:10.5182075Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:10.5292927Z   Downloading llama_parse-0.6.39-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:10.8098054Z Collecting llama-cloud-services>=0.6.39 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:10.8215153Z   Downloading llama_cloud_services-0.6.39-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:11.0375852Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:11.0492572Z   Downloading llama_parse-0.6.38-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:11.3399287Z Collecting llama-cloud-services>=0.6.37 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:11.3516243Z   Downloading llama_cloud_services-0.6.38-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:11.4764551Z Collecting llama-cloud>=0.1.5 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:11.4903376Z   Downloading llama_cloud-0.1.29-py3-none-any.whl.metadata (1.2 kB)
+2026-10-20T06:16:11.4934619Z Collecting llama-cloud-services>=0.6.37 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:11.5041995Z   Downloading llama_cloud_services-0.6.37-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:11.5083391Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:11.5189961Z   Downloading llama_parse-0.6.37-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:11.5640792Z   Downloading llama_parse-0.6.36-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:11.5997360Z Collecting llama-cloud-services>=0.6.36 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:11.6105261Z   Downloading llama_cloud_services-0.6.36-py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:11.6138926Z Collecting llama-cloud>=0.1.5 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:11.6256132Z   Downloading llama_cloud-0.1.28-py3-none-any.whl.metadata (1.2 kB)
+2026-10-20T06:16:11.6451865Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:11.6558150Z   Downloading llama_parse-0.6.35-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:11.6915714Z Collecting llama-cloud-services>=0.6.35 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:11.7029868Z   Downloading llama_cloud_services-0.6.35-py3-none-any.whl.metadata (3.4 kB)
+2026-10-20T06:16:11.7065021Z Collecting llama-cloud>=0.1.5 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:11.7172131Z   Downloading llama_cloud-0.1.27-py3-none-any.whl.metadata (1.2 kB)
+2026-10-20T06:16:11.7205636Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:11.7313706Z   Downloading llama_parse-0.6.34-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:11.7683495Z Collecting llama-cloud-services>=0.6.32 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:11.7791649Z   Downloading llama_cloud_services-0.6.34-py3-none-any.whl.metadata (3.4 kB)
+2026-10-20T06:16:11.7934084Z   Downloading llama_cloud_services-0.6.33-py3-none-any.whl.metadata (3.4 kB)
+2026-10-20T06:16:11.8072074Z   Downloading llama_cloud_services-0.6.32-py3-none-any.whl.metadata (3.4 kB)
+2026-10-20T06:16:11.8174620Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:11.8303414Z   Downloading llama_parse-0.6.33-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:11.8846317Z   Downloading llama_parse-0.6.32-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:11.9339721Z   Downloading llama_parse-0.6.31-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:11.9733372Z Collecting llama-cloud-services>=0.6.31 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:11.9849962Z   Downloading llama_cloud_services-0.6.31-py3-none-any.whl.metadata (3.4 kB)
+2026-10-20T06:16:12.0083159Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.0203862Z   Downloading llama_parse-0.6.30-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:12.0677525Z Collecting llama-cloud-services>=0.6.30 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.0791929Z   Downloading llama_cloud_services-0.6.30-py3-none-any.whl.metadata (3.4 kB)
+2026-10-20T06:16:12.0854371Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.0972568Z   Downloading llama_parse-0.6.28-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:12.1463863Z Collecting llama-cloud-services>=0.6.28 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.1576377Z   Downloading llama_cloud_services-0.6.29-py3-none-any.whl.metadata (3.4 kB)
+2026-10-20T06:16:12.1730682Z   Downloading llama_cloud_services-0.6.28-py3-none-any.whl.metadata (3.4 kB)
+2026-10-20T06:16:12.1775697Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.1891519Z   Downloading llama_parse-0.6.27-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:12.2396428Z Collecting llama-cloud-services>=0.6.27 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.2509332Z   Downloading llama_cloud_services-0.6.27-py3-none-any.whl.metadata (3.4 kB)
+2026-10-20T06:16:12.2555488Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.2672090Z   Downloading llama_parse-0.6.26-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:12.3154097Z Collecting llama-cloud-services>=0.6.26 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.3264378Z   Downloading llama_cloud_services-0.6.26-py3-none-any.whl.metadata (3.4 kB)
+2026-10-20T06:16:12.3309880Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.3425777Z   Downloading llama_parse-0.6.25-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:12.3847703Z Collecting llama-cloud-services>=0.6.24 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.3963570Z   Downloading llama_cloud_services-0.6.25-py3-none-any.whl.metadata (3.4 kB)
+2026-10-20T06:16:12.4104105Z   Downloading llama_cloud_services-0.6.24-py3-none-any.whl.metadata (3.4 kB)
+2026-10-20T06:16:12.4144392Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.4254481Z   Downloading llama_parse-0.6.24-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:12.4777240Z   Downloading llama_parse-0.6.23-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:12.5207748Z Collecting llama-cloud-services>=0.6.23 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.5322088Z   Downloading llama_cloud_services-0.6.23-py3-none-any.whl.metadata (3.4 kB)
+2026-10-20T06:16:12.5362039Z Collecting llama-cloud>=0.1.5 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.5475726Z   Downloading llama_cloud-0.1.22-py3-none-any.whl.metadata (1.2 kB)
+2026-10-20T06:16:12.5515288Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.5631399Z   Downloading llama_parse-0.6.22-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:12.6173929Z Collecting llama-cloud-services>=0.6.22 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.6282629Z   Downloading llama_cloud_services-0.6.22-py3-none-any.whl.metadata (3.4 kB)
+2026-10-20T06:16:12.6320430Z Collecting llama-cloud>=0.1.5 (from llama-index-indices-managed-llama-cloud>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.6425721Z   Downloading llama_cloud-0.1.19-py3-none-any.whl.metadata (902 bytes)
+2026-10-20T06:16:12.6463291Z Collecting llama-parse>=0.5.0 (from llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.6577927Z   Downloading llama_parse-0.6.21-py3-none-any.whl.metadata (6.9 kB)
+2026-10-20T06:16:12.7021690Z Collecting llama-cloud-services>=0.6.21 (from llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.7130884Z   Downloading llama_cloud_services-0.6.21-py3-none-any.whl.metadata (3.4 kB)
+2026-10-20T06:16:12.7351502Z Collecting platformdirs<5.0.0,>=4.3.7 (from llama-cloud-services>=0.6.21->llama-parse>=0.5.0->llama-index-readers-llama-parse>=0.3.0->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.7453667Z   Downloading platformdirs-4.13.5-py3-none-any.whl.metadata (5.5 kB)
+2026-10-20T06:16:12.7892013Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich<14,>=10.14.0->streamlit==1.39.0->-r requirements-dev.txt (line 2))
+2026-10-20T06:16:12.7994557Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-10-20T06:16:12.8216196Z Collecting defusedxml (from nltk>3.8.1->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.8320815Z   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+2026-10-20T06:16:12.8546329Z Collecting joblib (from nltk>3.8.1->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:12.8650871Z   Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+2026-10-20T06:16:12.9236697Z Collecting transformers<6.0.0,>=5.0.0 (from sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:12.9346965Z   Downloading transformers-5.20.2-py3-none-any.whl.metadata (31 kB)
+2026-10-20T06:16:13.0693571Z Collecting tokenizers>=0.19 (from sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:13.0798729Z   Downloading tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.8 kB)
+2026-10-20T06:16:13.0831925Z INFO: pip is looking at multiple versions of sentence-transformers to determine which version is compatible with other requirements. This could take a while.
+2026-10-20T06:16:13.0836920Z Collecting sentence-transformers>=2.6.1 (from llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:13.0951525Z   Downloading sentence_transformers-6.0.1-py3-none-any.whl.metadata (20 kB)
+2026-10-20T06:16:13.1096579Z   Downloading sentence_transformers-6.0.0-py3-none-any.whl.metadata (20 kB)
+2026-10-20T06:16:13.1322869Z   Downloading sentence_transformers-5.7.0-py3-none-any.whl.metadata (18 kB)
+2026-10-20T06:16:13.1764592Z Collecting torch>=1.11.0 (from sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:13.1866324Z   Downloading torch-2.14.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (37 kB)
+2026-10-20T06:16:13.3376373Z Collecting scikit-learn>=0.22.0 (from sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:13.3484235Z   Downloading scikit_learn-1.9.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.3 kB)
+2026-10-20T06:16:13.3835672Z Collecting typer (from transformers<6.0.0,>=5.0.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:13.3939313Z   Downloading typer-0.27.3-py3-none-any.whl.metadata (16 kB)
+2026-10-20T06:16:13.4975393Z Collecting safetensors>=0.8.0 (from transformers<6.0.0,>=5.0.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:13.5079428Z   Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+2026-10-20T06:16:13.5368833Z Collecting threadpoolctl>=3.5.0 (from scikit-learn>=0.22.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:13.5470355Z   Downloading threadpoolctl-3.7.0-py3-none-any.whl.metadata (24 kB)
+2026-10-20T06:16:13.5665628Z Collecting cloudpickle>=3.0 (from joblib->nltk>3.8.1->llama_index==0.11.19->-r requirements-dev.txt (line 1))
+2026-10-20T06:16:13.5768054Z   Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+2026-10-20T06:16:13.6369126Z Collecting requests-file>=1.4 (from tldextract>=2.0.1->newspaper3k<0.3.0,>=0.2.8->llama-index-readers-web==0.2.4->-r requirements-dev.txt (line 10))
+2026-10-20T06:16:13.6473414Z   Downloading requests_file-3.0.1-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-10-20T06:16:13.6659298Z Requirement already satisfied: setuptools>=77.0.3 in /opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages (from torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7)) (79.0.1)
+2026-10-20T06:16:13.7923126Z Collecting sympy>=1.13.3 (from torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:13.8028664Z   Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+2026-10-20T06:16:13.9094093Z Collecting cuda-toolkit==13.0.3 (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:13.9196229Z   Downloading cuda_toolkit-13.0.3.0-py2.py3-none-any.whl.metadata (17 kB)
+2026-10-20T06:16:14.1357286Z Collecting cuda-bindings<14,>=13.0.3 (from torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.1461710Z   Downloading cuda_bindings-13.4.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-10-20T06:16:14.1642416Z Collecting nvidia-cudnn-cu13==9.24.0.43 (from torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.1743601Z   Downloading nvidia_cudnn_cu13-9.24.0.43-py3-none-manylinux_2_27_x86_64.whl.metadata (1.9 kB)
+2026-10-20T06:16:14.1911299Z Collecting nvidia-cusparselt-cu13==0.8.1 (from torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.2013808Z   Downloading nvidia_cusparselt_cu13-0.8.1-py3-none-manylinux2014_x86_64.whl.metadata (12 kB)
+2026-10-20T06:16:14.2175629Z Collecting nvidia-nccl-cu13==2.30.7 (from torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.2276248Z   Downloading nvidia_nccl_cu13-2.30.7-py3-none-manylinux_2_18_x86_64.whl.metadata (2.1 kB)
+2026-10-20T06:16:14.2484773Z Collecting nvidia-nvshmem-cu13==3.4.5 (from torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.2586172Z   Downloading nvidia_nvshmem_cu13-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.1 kB)
+2026-10-20T06:16:14.2788139Z Collecting triton~=3.8.0 (from torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.2889511Z   Downloading triton-3.8.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (978 bytes)
+2026-10-20T06:16:14.3124659Z Collecting nvidia-cublas==13.1.1.3.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.3226069Z   Downloading nvidia_cublas-13.1.1.3-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+2026-10-20T06:16:14.3389978Z Collecting nvidia-cuda-nvrtc==13.0.88.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.3491475Z   Downloading nvidia_cuda_nvrtc-13.0.88-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+2026-10-20T06:16:14.3656732Z Collecting nvidia-cuda-runtime==13.0.96.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.3758015Z   Downloading nvidia_cuda_runtime-13.0.96-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+2026-10-20T06:16:14.3922458Z Collecting nvidia-cufft==12.0.0.61.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.4023943Z   Downloading nvidia_cufft-12.0.0.61-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+2026-10-20T06:16:14.4387069Z Collecting nvidia-nvjitlink<14,>=13.0.88 (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.4490052Z   Downloading nvidia_nvjitlink-13.4.92-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.8 kB)
+2026-10-20T06:16:14.4652286Z Collecting nvidia-cufile==1.15.1.6.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.4753560Z   Downloading nvidia_cufile-1.15.1.6-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+2026-10-20T06:16:14.4919715Z Collecting nvidia-cuda-cupti==13.0.85.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.5020201Z   Downloading nvidia_cuda_cupti-13.0.85-py3-none-manylinux_2_25_x86_64.whl.metadata (1.7 kB)
+2026-10-20T06:16:14.5195838Z Collecting nvidia-curand==10.4.0.35.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.5297748Z   Downloading nvidia_curand-10.4.0.35-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+2026-10-20T06:16:14.5469430Z Collecting nvidia-cusolver==12.0.4.66.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.5569726Z   Downloading nvidia_cusolver-12.0.4.66-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+2026-10-20T06:16:14.5736371Z Collecting nvidia-cusparse==12.6.3.3.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.5838566Z   Downloading nvidia_cusparse-12.6.3.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+2026-10-20T06:16:14.6036300Z Collecting nvidia-nvtx==13.0.85.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.6137419Z   Downloading nvidia_nvtx-13.0.85-py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl.metadata (1.8 kB)
+2026-10-20T06:16:14.6493325Z Collecting cuda-pathfinder>=1.4.2 (from cuda-bindings<14,>=13.0.3->torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.6597747Z   Downloading cuda_pathfinder-1.8.3-py3-none-any.whl.metadata (1.9 kB)
+2026-10-20T06:16:14.6953844Z Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch>=1.11.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.7056465Z   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+2026-10-20T06:16:14.7327580Z Collecting shellingham>=1.3.0 (from typer->transformers<6.0.0,>=5.0.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.7429127Z   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+2026-10-20T06:16:14.7604377Z Collecting annotated-doc>=0.0.2 (from typer->transformers<6.0.0,>=5.0.0->sentence-transformers>=2.6.1->llama-index-embeddings-huggingface==0.3.1->-r requirements-dev.txt (line 7))
+2026-10-20T06:16:14.7705578Z   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+2026-10-20T06:16:14.7918974Z Downloading llama_index-0.11.19-py3-none-any.whl (6.8 kB)
+2026-10-20T06:16:14.8055869Z Downloading streamlit-1.39.0-py2.py3-none-any.whl (8.7 MB)
+2026-10-20T06:16:14.8679182Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 141.0 MB/s  0:00:00
+2026-10-20T06:16:14.8802921Z Downloading langchain-0.3.4-py3-none-any.whl (1.0 MB)
+2026-10-20T06:16:14.8856205Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 203.8 MB/s  0:00:00
+2026-10-20T06:16:14.8971748Z Downloading langchain_community-0.3.3-py3-none-any.whl (2.4 MB)
+2026-10-20T06:16:14.9168811Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 145.6 MB/s  0:00:00
+2026-10-20T06:16:14.9279777Z Downloading langchain_openai-0.2.3-py3-none-any.whl (49 kB)
+2026-10-20T06:16:14.9415135Z Downloading ollama-0.3.3-py3-none-any.whl (10 kB)
+2026-10-20T06:16:14.9544209Z Downloading llama_index_embeddings_huggingface-0.3.1-py3-none-any.whl (8.6 kB)
+2026-10-20T06:16:14.9703425Z Downloading llama_index_embeddings_langchain-0.2.1-py3-none-any.whl (2.5 kB)
+2026-10-20T06:16:14.9835272Z Downloading llama_index_llms_langchain-0.4.2-py3-none-any.whl (5.2 kB)
+2026-10-20T06:16:15.0068891Z Downloading llama_index_readers_web-0.2.4-py3-none-any.whl (76 kB)
+2026-10-20T06:16:15.0236986Z Downloading llama_index_retrievers_bm25-0.4.0-py3-none-any.whl (3.6 kB)
+2026-10-20T06:16:15.0563748Z Downloading llama_index_storage_kvstore_redis-0.2.0-py3-none-any.whl (3.2 kB)
+2026-10-20T06:16:15.0700418Z Downloading llama_index_vector_stores_elasticsearch-0.3.3-py3-none-any.whl (7.1 kB)
+2026-10-20T06:16:15.1065442Z Downloading llama_index_vector_stores_lancedb-0.2.4-py3-none-any.whl (6.8 kB)
+2026-10-20T06:16:15.1200381Z Downloading llama_index_llms_ollama-0.3.4-py3-none-any.whl (5.8 kB)
+2026-10-20T06:16:15.1545642Z Downloading llama_index_storage_chat_store_redis-0.3.2-py3-none-any.whl (5.1 kB)
+2026-10-20T06:16:15.1910964Z Downloading llama_index_storage_docstore_redis-0.2.0-py3-none-any.whl (2.2 kB)
+2026-10-20T06:16:15.2043799Z Downloading llama_index_storage_index_store_redis-0.3.0-py3-none-any.whl (2.2 kB)
+2026-10-20T06:16:15.2172890Z Downloading aiohttp-3.14.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.9 MB)
+2026-10-20T06:16:15.2251771Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 298.3 MB/s  0:00:00
+2026-10-20T06:16:15.2354508Z Downloading altair-5.5.0-py3-none-any.whl (731 kB)
+2026-10-20T06:16:15.2405509Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 731.2/731.2 kB 146.7 MB/s  0:00:00
+2026-10-20T06:16:15.2508928Z Downloading beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+2026-10-20T06:16:15.2633579Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+2026-10-20T06:16:15.2756275Z Downloading bm25s-0.2.14-py3-none-any.whl (55 kB)
+2026-10-20T06:16:15.2879616Z Downloading cachetools-5.5.2-py3-none-any.whl (10 kB)
+2026-10-20T06:16:15.3002316Z Downloading chromedriver_autoinstaller-0.6.4-py3-none-any.whl (7.6 kB)
+2026-10-20T06:16:15.3123069Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+2026-10-20T06:16:15.3248694Z Downloading dataclasses_json-0.6.7-py3-none-any.whl (28 kB)
+2026-10-20T06:16:15.3371671Z Downloading elasticsearch-8.19.3-py3-none-any.whl (952 kB)
+2026-10-20T06:16:15.3426173Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 952.8/952.8 kB 190.1 MB/s  0:00:00
+2026-10-20T06:16:15.3529239Z Downloading elastic_transport-8.19.0-py3-none-any.whl (65 kB)
+2026-10-20T06:16:15.3652675Z Downloading gitpython-3.2.1-py3-none-any.whl (231 kB)
+2026-10-20T06:16:15.3866132Z Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+2026-10-20T06:16:15.3992983Z Downloading httpx-0.27.2-py3-none-any.whl (76 kB)
+2026-10-20T06:16:15.4116482Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-10-20T06:16:15.4246674Z Downloading langchain_core-0.3.63-py3-none-any.whl (438 kB)
+2026-10-20T06:16:15.4376470Z Downloading jsonpatch-1.36-py3-none-any.whl (17 kB)
+2026-10-20T06:16:15.4515389Z Downloading langsmith-0.1.147-py3-none-any.whl (311 kB)
+2026-10-20T06:16:15.4647380Z Downloading langchain_text_splitters-0.3.8-py3-none-any.whl (32 kB)
+2026-10-20T06:16:15.4781989Z Downloading llama_index_agent_openai-0.3.4-py3-none-any.whl (13 kB)
+2026-10-20T06:16:15.4910807Z Downloading llama_index_cli-0.3.1-py3-none-any.whl (27 kB)
+2026-10-20T06:16:15.5046973Z Downloading llama_index_core-0.11.23-py3-none-any.whl (1.6 MB)
+2026-10-20T06:16:15.5138104Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 221.5 MB/s  0:00:00
+2026-10-20T06:16:15.5240264Z Downloading dirtyjson-1.0.8-py3-none-any.whl (25 kB)
+2026-10-20T06:16:15.5362460Z Downloading filetype-1.2.0-py2.py3-none-any.whl (19 kB)
+2026-10-20T06:16:15.5491928Z Downloading llama_index_embeddings_openai-0.2.5-py3-none-any.whl (6.1 kB)
+2026-10-20T06:16:15.5737001Z Downloading llama_index_legacy-0.9.48.post4-py3-none-any.whl (1.2 MB)
+2026-10-20T06:16:15.5796009Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 228.3 MB/s  0:00:00
+2026-10-20T06:16:15.5932585Z Downloading llama_index_llms_openai-0.2.16-py3-none-any.whl (13 kB)
+2026-10-20T06:16:15.6067251Z Downloading llama_index_multi_modal_llms_openai-0.2.3-py3-none-any.whl (5.9 kB)
+2026-10-20T06:16:15.6198823Z Downloading llama_index_program_openai-0.2.0-py3-none-any.whl (5.3 kB)
+2026-10-20T06:16:15.6327373Z Downloading llama_index_question_gen_openai-0.2.0-py3-none-any.whl (2.9 kB)
+2026-10-20T06:16:15.6452801Z Downloading llama_index_readers_file-0.2.2-py3-none-any.whl (38 kB)
+2026-10-20T06:16:15.6574456Z Downloading marshmallow-3.26.2-py3-none-any.whl (50 kB)
+2026-10-20T06:16:15.6699556Z Downloading multidict-7.1.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (480 kB)
+2026-10-20T06:16:15.6836232Z Downloading nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+2026-10-20T06:16:15.6954896Z Downloading newspaper3k-0.2.8-py3-none-any.whl (211 kB)
+2026-10-20T06:16:15.7088234Z Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB)
+2026-10-20T06:16:15.8454161Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.3/18.3 MB 134.2 MB/s  0:00:00
+2026-10-20T06:16:15.8561294Z Downloading openai-1.109.1-py3-none-any.whl (948 kB)
+2026-10-20T06:16:15.8619717Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 948.6/948.6 kB 166.9 MB/s  0:00:00
+2026-10-20T06:16:15.8722510Z Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+2026-10-20T06:16:15.8848085Z Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+2026-10-20T06:16:15.8972174Z Downloading jiter-0.17.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (346 kB)
+2026-10-20T06:16:15.9102171Z Downloading orjson-3.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (130 kB)
+2026-10-20T06:16:15.9226681Z Downloading packaging-24.2-py3-none-any.whl (65 kB)
+2026-10-20T06:16:15.9466178Z Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+2026-10-20T06:16:16.0300573Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 153.8 MB/s  0:00:00
+2026-10-20T06:16:16.0407166Z Downloading pillow-10.4.0-cp311-cp311-manylinux_2_28_x86_64.whl (4.5 MB)
+2026-10-20T06:16:16.0780401Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 120.2 MB/s  0:00:00
+2026-10-20T06:16:16.0887015Z Downloading playwright-1.64.0-py3-none-manylinux1_x86_64.whl (48.3 MB)
+2026-10-20T06:16:16.4208500Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.3/48.3 MB 145.7 MB/s  0:00:00
+2026-10-20T06:16:16.4320204Z Downloading greenlet-3.5.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (624 kB)
+2026-10-20T06:16:16.4368125Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 624.4/624.4 kB 114.5 MB/s  0:00:00
+2026-10-20T06:16:16.4472893Z Downloading protobuf-5.29.6-cp38-abi3-manylinux2014_x86_64.whl (320 kB)
+2026-10-20T06:16:16.4606561Z Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+2026-10-20T06:16:16.4739438Z Downloading pydantic_core-2.50.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+2026-10-20T06:16:16.4872274Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 159.5 MB/s  0:00:00
+2026-10-20T06:16:16.4975256Z Downloading pydantic_settings-2.16.0-py3-none-any.whl (80 kB)
+2026-10-20T06:16:16.5140244Z Downloading pydeck-0.9.3-py2.py3-none-any.whl (11.4 MB)
+2026-10-20T06:16:16.5916483Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.4/11.4 MB 147.3 MB/s  0:00:00
+2026-10-20T06:16:16.6020007Z Downloading pyee-13.0.1-py3-none-any.whl (15 kB)
+2026-10-20T06:16:16.6214818Z Downloading pypdf-4.3.1-py3-none-any.whl (295 kB)
+2026-10-20T06:16:16.6356544Z Downloading PyStemmer-2.2.0.3-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (669 kB)
+2026-10-20T06:16:16.6716647Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 669.3/669.3 kB 12.0 MB/s  0:00:00
+2026-10-20T06:16:16.6824782Z Downloading redis-5.3.1-py3-none-any.whl (272 kB)
+2026-10-20T06:16:16.7715461Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+2026-10-20T06:16:16.7846026Z Downloading charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (269 kB)
+2026-10-20T06:16:16.8094576Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+2026-10-20T06:16:16.8243511Z Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+2026-10-20T06:16:16.8369866Z Downloading rich-13.9.4-py3-none-any.whl (242 kB)
+2026-10-20T06:16:16.8503003Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-20T06:16:16.8562641Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 236.2 MB/s  0:00:00
+2026-10-20T06:16:16.8669281Z Downloading selenium-4.51.0-py3-none-any.whl (11.8 MB)
+2026-10-20T06:16:16.9429195Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.8/11.8 MB 156.8 MB/s  0:00:00
+2026-10-20T06:16:16.9537886Z Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+2026-10-20T06:16:16.9671369Z Downloading sqlalchemy-2.1.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+2026-10-20T06:16:17.0003008Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 140.0 MB/s  0:00:00
+2026-10-20T06:16:17.0107887Z Downloading striprtf-0.0.26-py3-none-any.whl (6.9 kB)
+2026-10-20T06:16:17.0234161Z Downloading tenacity-8.5.0-py3-none-any.whl (28 kB)
+2026-10-20T06:16:17.0363395Z Downloading tiktoken-0.14.0-cp311-cp311-manylinux_2_28_x86_64.whl (1.2 MB)
+2026-10-20T06:16:17.0419799Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 233.2 MB/s  0:00:00
+2026-10-20T06:16:17.0522447Z Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+2026-10-20T06:16:17.0647933Z Downloading tornado-6.5.10-cp39-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (467 kB)
+2026-10-20T06:16:17.0779326Z Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+2026-10-20T06:16:17.0923194Z Downloading trio-0.34.0-py3-none-any.whl (511 kB)
+2026-10-20T06:16:17.1057159Z Downloading trio_websocket-0.12.2-py3-none-any.whl (21 kB)
+2026-10-20T06:16:17.1183109Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-20T06:16:17.1304032Z Downloading typing_inspect-0.9.0-py3-none-any.whl (8.8 kB)
+2026-10-20T06:16:17.1427875Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+2026-10-20T06:16:17.1550848Z Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+2026-10-20T06:16:17.1780889Z Downloading watchdog-5.0.3-py3-none-manylinux2014_x86_64.whl (79 kB)
+2026-10-20T06:16:17.1904165Z Downloading websocket_client-1.9.2-py3-none-any.whl (95 kB)
+2026-10-20T06:16:17.2029874Z Downloading yarl-1.25.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (117 kB)
+2026-10-20T06:16:17.2153970Z Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+2026-10-20T06:16:17.2273932Z Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+2026-10-20T06:16:17.2398763Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+2026-10-20T06:16:17.2520274Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-10-20T06:16:17.2645610Z Downloading certifi-2026.10.19-py3-none-any.whl (136 kB)
+2026-10-20T06:16:17.2770746Z Downloading cssselect-1.6.0-py3-none-any.whl (22 kB)
+2026-10-20T06:16:17.2891446Z Downloading deprecated-1.3.1-py2.py3-none-any.whl (11 kB)
+2026-10-20T06:16:17.3013678Z Downloading wrapt-2.5.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (240 kB)
+2026-10-20T06:16:17.3141200Z Downloading feedparser-6.0.14-py3-none-any.whl (80 kB)
+2026-10-20T06:16:17.3273244Z Downloading feedparser_sgmllib-2.1.0-py3-none-any.whl (11 kB)
+2026-10-20T06:16:17.3591436Z Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+2026-10-20T06:16:17.3722675Z Downloading fsspec-2026.9.0-py3-none-any.whl (221 kB)
+2026-10-20T06:16:17.3850181Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-10-20T06:16:17.3974537Z Downloading huggingface_hub-2.2.0-py3-none-any.whl (839 kB)
+2026-10-20T06:16:17.4028919Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 839.9/839.9 kB 168.6 MB/s  0:00:00
+2026-10-20T06:16:17.4130828Z Downloading hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.2 MB)
+2026-10-20T06:16:17.4296190Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 266.3 MB/s  0:00:00
+2026-10-20T06:16:17.4397492Z Downloading httpx2-2.15.1-py3-none-any.whl (96 kB)
+2026-10-20T06:16:17.4524328Z Downloading httpcore2-2.15.1-py3-none-any.whl (85 kB)
+2026-10-20T06:16:17.4648135Z Downloading filelock-4.2.4-py3-none-any.whl (162 kB)
+2026-10-20T06:16:17.4775196Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-10-20T06:16:17.4917433Z Downloading jsonpointer-3.4-py3-none-any.whl (9.0 kB)
+2026-10-20T06:16:17.5048227Z Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+2026-10-20T06:16:17.5173162Z Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+2026-10-20T06:16:17.5397278Z Downloading lancedb-0.40.0-cp310-abi3-manylinux_2_28_x86_64.whl (75.2 MB)
+2026-10-20T06:16:18.1218062Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.2/75.2 MB 129.3 MB/s  0:00:00
+2026-10-20T06:16:18.1325377Z Downloading deprecation-2.1.0-py2.py3-none-any.whl (11 kB)
+2026-10-20T06:16:18.1450838Z Downloading lance_namespace-0.13.0-py3-none-any.whl (13 kB)
+2026-10-20T06:16:18.1577134Z Downloading lance_namespace_urllib3_client-0.13.0-py3-none-any.whl (406 kB)
+2026-10-20T06:16:18.1725222Z Downloading llama_index_indices_managed_llama_cloud-0.6.0-py3-none-any.whl (11 kB)
+2026-10-20T06:16:18.1852951Z Downloading llama_index_readers_llama_parse-0.3.0-py3-none-any.whl (2.5 kB)
+2026-10-20T06:16:18.1994081Z Downloading llama_parse-0.6.21-py3-none-any.whl (4.9 kB)
+2026-10-20T06:16:18.2150712Z Downloading llama_cloud_services-0.6.21-py3-none-any.whl (37 kB)
+2026-10-20T06:16:18.2370700Z Downloading llama_cloud-0.1.19-py3-none-any.whl (263 kB)
+2026-10-20T06:16:18.2675283Z Downloading platformdirs-4.13.5-py3-none-any.whl (32 kB)
+2026-10-20T06:16:18.2807368Z Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+2026-10-20T06:16:18.2932905Z Downloading lxml-6.1.3-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+2026-10-20T06:16:18.3266654Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 157.9 MB/s  0:00:00
+2026-10-20T06:16:18.3370228Z Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+2026-10-20T06:16:18.3497263Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-10-20T06:16:18.3621753Z Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-10-20T06:16:18.3745906Z Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+2026-10-20T06:16:18.3872849Z Downloading narwhals-2.27.1-py3-none-any.whl (483 kB)
+2026-10-20T06:16:18.4006204Z Downloading networkx-3.6.1-py3-none-any.whl (2.1 MB)
+2026-10-20T06:16:18.4083929Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 316.9 MB/s  0:00:00
+2026-10-20T06:16:18.4188807Z Downloading nltk-3.10.3-py3-none-any.whl (1.8 MB)
+2026-10-20T06:16:18.4396303Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 82.3 MB/s  0:00:00
+2026-10-20T06:16:18.4500163Z Downloading outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+2026-10-20T06:16:18.4632475Z Downloading overrides-7.7.0-py3-none-any.whl (17 kB)
+2026-10-20T06:16:18.4754749Z Downloading propcache-0.5.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (235 kB)
+2026-10-20T06:16:18.4884697Z Downloading pyarrow-26.0.0-cp311-cp311-manylinux_2_28_x86_64.whl (53.9 MB)
+2026-10-20T06:16:18.8622900Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.9/53.9 MB 145.0 MB/s  0:00:00
+2026-10-20T06:16:18.8731196Z Downloading pyjwt-2.15.1-py3-none-any.whl (33 kB)
+2026-10-20T06:16:18.8859426Z Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-10-20T06:16:18.8985485Z Downloading pytz-2026.5-py2.py3-none-any.whl (506 kB)
+2026-10-20T06:16:18.9117795Z Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+2026-10-20T06:16:18.9169136Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 169.4 MB/s  0:00:00
+2026-10-20T06:16:18.9271093Z Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+2026-10-20T06:16:18.9391849Z Downloading regex-2026.9.29-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (804 kB)
+2026-10-20T06:16:18.9450384Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 805.0/805.0 kB 128.9 MB/s  0:00:00
+2026-10-20T06:16:18.9563208Z Downloading rpds_py-2026.9.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (375 kB)
+2026-10-20T06:16:18.9696327Z Downloading sentence_transformers-5.7.0-py3-none-any.whl (611 kB)
+2026-10-20T06:16:18.9745966Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 611.3/611.3 kB 111.1 MB/s  0:00:00
+2026-10-20T06:16:18.9849420Z Downloading transformers-5.20.2-py3-none-any.whl (12.8 MB)
+2026-10-20T06:16:19.0887751Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 123.9 MB/s  0:00:00
+2026-10-20T06:16:19.0994544Z Downloading tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.4 MB)
+2026-10-20T06:16:19.1181935Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 188.4 MB/s  0:00:00
+2026-10-20T06:16:19.1288798Z Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+2026-10-20T06:16:19.1425379Z Downloading scikit_learn-1.9.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.3 MB)
+2026-10-20T06:16:19.1984072Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.3/9.3 MB 167.9 MB/s  0:00:00
+2026-10-20T06:16:19.2091745Z Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+2026-10-20T06:16:19.2224413Z Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+2026-10-20T06:16:19.2350745Z Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+2026-10-20T06:16:19.4799738Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 144.5 MB/s  0:00:00
+2026-10-20T06:16:19.4910027Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-10-20T06:16:19.5033230Z Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+2026-10-20T06:16:19.5158020Z Downloading soupsieve-3.0.3-py3-none-any.whl (41 kB)
+2026-10-20T06:16:19.5283576Z Downloading threadpoolctl-3.7.0-py3-none-any.whl (26 kB)
+2026-10-20T06:16:19.5404136Z Downloading tldextract-5.4.0-py3-none-any.whl (107 kB)
+2026-10-20T06:16:19.5525130Z Downloading requests_file-3.0.1-py2.py3-none-any.whl (4.5 kB)
+2026-10-20T06:16:19.5647992Z Downloading torch-2.14.1-cp311-cp311-manylinux_2_28_x86_64.whl (554.6 MB)
+2026-10-20T06:16:25.4931749Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 554.6/554.6 MB 49.2 MB/s  0:00:05
+2026-10-20T06:16:25.5039636Z Downloading cuda_toolkit-13.0.3.0-py2.py3-none-any.whl (2.5 kB)
+2026-10-20T06:16:25.5165372Z Downloading nvidia_cudnn_cu13-9.24.0.43-py3-none-manylinux_2_27_x86_64.whl (553.1 MB)
+2026-10-20T06:16:31.2253369Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 553.1/553.1 MB 49.9 MB/s  0:00:05
+2026-10-20T06:16:31.2366384Z Downloading nvidia_cusparselt_cu13-0.8.1-py3-none-manylinux2014_x86_64.whl (170.1 MB)
+2026-10-20T06:16:32.3387914Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 170.1/170.1 MB 154.5 MB/s  0:00:01
+2026-10-20T06:16:32.3500848Z Downloading nvidia_nccl_cu13-2.30.7-py3-none-manylinux_2_18_x86_64.whl (216.0 MB)
+2026-10-20T06:16:34.7791977Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 216.0/216.0 MB 88.9 MB/s  0:00:02
+2026-10-20T06:16:34.7904300Z Downloading nvidia_nvshmem_cu13-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (60.4 MB)
+2026-10-20T06:16:35.2552203Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.4/60.4 MB 130.2 MB/s  0:00:00
+2026-10-20T06:16:35.2658676Z Downloading cuda_bindings-13.4.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (7.2 MB)
+2026-10-20T06:16:35.3199445Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 MB 132.5 MB/s  0:00:00
+2026-10-20T06:16:35.3304599Z Downloading nvidia_cublas-13.1.1.3-py3-none-manylinux_2_27_x86_64.whl (423.1 MB)
+2026-10-20T06:16:40.7689799Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 423.1/423.1 MB 51.3 MB/s  0:00:05
+2026-10-20T06:16:40.7798545Z Downloading nvidia_cuda_cupti-13.0.85-py3-none-manylinux_2_25_x86_64.whl (10.7 MB)
+2026-10-20T06:16:40.8604003Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.7/10.7 MB 133.3 MB/s  0:00:00
+2026-10-20T06:16:40.8710961Z Downloading nvidia_cuda_nvrtc-13.0.88-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (90.2 MB)
+2026-10-20T06:16:41.5545790Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.2/90.2 MB 132.1 MB/s  0:00:00
+2026-10-20T06:16:41.5654491Z Downloading nvidia_cuda_runtime-13.0.96-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.2 MB)
+2026-10-20T06:16:41.6088150Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 48.4 MB/s  0:00:00
+2026-10-20T06:16:41.6195423Z Downloading nvidia_cufft-12.0.0.61-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (214.1 MB)
+2026-10-20T06:16:45.1089320Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 214.1/214.1 MB 61.3 MB/s  0:00:03
+2026-10-20T06:16:45.1197122Z Downloading nvidia_cufile-1.15.1.6-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.2 MB)
+2026-10-20T06:16:45.4184878Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 3.2 MB/s  0:00:00
+2026-10-20T06:16:45.4291914Z Downloading nvidia_curand-10.4.0.35-py3-none-manylinux_2_27_x86_64.whl (59.5 MB)
+2026-10-20T06:16:45.9754507Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.5/59.5 MB 109.0 MB/s  0:00:00
+2026-10-20T06:16:45.9864456Z Downloading nvidia_cusolver-12.0.4.66-py3-none-manylinux_2_27_x86_64.whl (200.9 MB)
+2026-10-20T06:16:47.7798685Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 200.9/200.9 MB 112.0 MB/s  0:00:01
+2026-10-20T06:16:47.7909890Z Downloading nvidia_cusparse-12.6.3.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (145.9 MB)
+2026-10-20T06:16:49.1154069Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 145.9/145.9 MB 110.2 MB/s  0:00:01
+2026-10-20T06:16:49.1261681Z Downloading nvidia_nvjitlink-13.4.92-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (42.5 MB)
+2026-10-20T06:16:49.5209579Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.5/42.5 MB 107.5 MB/s  0:00:00
+2026-10-20T06:16:49.5315131Z Downloading nvidia_nvtx-13.0.85-py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl (148 kB)
+2026-10-20T06:16:49.5445052Z Downloading triton-3.8.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (247.9 MB)
+2026-10-20T06:16:53.9607521Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.9/247.9 MB 56.1 MB/s  0:00:04
+2026-10-20T06:16:53.9720314Z Downloading cuda_pathfinder-1.8.3-py3-none-any.whl (62 kB)
+2026-10-20T06:16:54.2083580Z Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+2026-10-20T06:16:54.4701192Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 23.2 MB/s  0:00:00
+2026-10-20T06:16:54.4811773Z Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+2026-10-20T06:16:54.4859515Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 99.6 MB/s  0:00:00
+2026-10-20T06:16:54.4963344Z Downloading truststore-0.10.5-py3-none-any.whl (19 kB)
+2026-10-20T06:16:54.5081976Z Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+2026-10-20T06:16:54.5200363Z Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+2026-10-20T06:16:54.5386419Z Downloading wsproto-1.3.2-py3-none-any.whl (24 kB)
+2026-10-20T06:16:54.5505670Z Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+2026-10-20T06:16:54.5623445Z Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+2026-10-20T06:16:54.5763280Z Downloading tantivy-0.26.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.5 MB)
+2026-10-20T06:16:54.6192022Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 105.8 MB/s  0:00:00
+2026-10-20T06:16:54.6294423Z Downloading typer-0.27.3-py3-none-any.whl (123 kB)
+2026-10-20T06:16:54.6415923Z Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+2026-10-20T06:16:54.6535107Z Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+2026-10-20T06:16:57.1022911Z Building wheels for collected packages: docx2txt, html2text, tinysegmenter, spider-client, feedfinder2, jieba3k
+2026-10-20T06:16:57.1029327Z   Building wheel for docx2txt (pyproject.toml): started
+2026-10-20T06:16:57.2342312Z   Building wheel for docx2txt (pyproject.toml): finished with status 'done'
+2026-10-20T06:16:57.2344837Z   Created wheel for docx2txt: filename=docx2txt-0.8-py3-none-any.whl size=4024 sha256=f3cfdf70b1005be7693ae338b92e2787d499782c1af87cedb3e14422d91f0f6a
+2026-10-20T06:16:57.2345712Z   Stored in directory: /home/runner/.cache/pip/wheels/0f/0e/7a/3094a4ceefe657bff7e12dd9592a9d5b6487ef4338ace0afa6
+2026-10-20T06:16:57.2361798Z   Building wheel for html2text (pyproject.toml): started
+2026-10-20T06:16:57.4005573Z   Building wheel for html2text (pyproject.toml): finished with status 'done'
+2026-10-20T06:16:57.4009110Z   Created wheel for html2text: filename=html2text-2024.2.26-py3-none-any.whl size=33169 sha256=5177fadc2a09c3ecbe4d328e432403b2a5f89e7dcfde9fdfb222a51799886646
+2026-10-20T06:16:57.4010305Z   Stored in directory: /home/runner/.cache/pip/wheels/23/58/7c/d9c8c4d924a1ac2b621add1b2c1d30b639629a33cfdfde6a45
+2026-10-20T06:16:57.4031287Z   Building wheel for tinysegmenter (pyproject.toml): started
+2026-10-20T06:16:57.5453974Z   Building wheel for tinysegmenter (pyproject.toml): finished with status 'done'
+2026-10-20T06:16:57.5456414Z   Created wheel for tinysegmenter: filename=tinysegmenter-0.3-py3-none-any.whl size=13635 sha256=c3093e1be76b790a5e937145fd2eb951ec214ffb813797e12d5ccc6db3b75ff8
+2026-10-20T06:16:57.5457347Z   Stored in directory: /home/runner/.cache/pip/wheels/fc/ab/f8/cce3a9ae6d828bd346be695f7ff54612cd22b7cbd7208d68f3
+2026-10-20T06:16:57.5475007Z   Building wheel for spider-client (pyproject.toml): started
+2026-10-20T06:16:57.6954861Z   Building wheel for spider-client (pyproject.toml): finished with status 'done'
+2026-10-20T06:16:57.6958627Z   Created wheel for spider-client: filename=spider_client-0.0.27-py3-none-any.whl size=6052 sha256=232d5190902b8add8ccee385146e1a6abe77ab8b200a6fb7d072967c2c2a4f15
+2026-10-20T06:16:57.6960217Z   Stored in directory: /home/runner/.cache/pip/wheels/72/73/17/fab0356e5eec634ef9f9d0bdec011743f48ef380ee7307804f
+2026-10-20T06:16:57.6977606Z   Building wheel for feedfinder2 (pyproject.toml): started
+2026-10-20T06:16:57.8344397Z   Building wheel for feedfinder2 (pyproject.toml): finished with status 'done'
+2026-10-20T06:16:57.8348186Z   Created wheel for feedfinder2: filename=feedfinder2-0.0.4-py3-none-any.whl size=3394 sha256=f14040bfc2f21fd5db5254cb138fe88cef11a64365ef616c185c199f426f748a
+2026-10-20T06:16:57.8349079Z   Stored in directory: /home/runner/.cache/pip/wheels/80/d5/72/9cd9eccc819636436c6a6e59c22a0fb1ec167beef141f56491
+2026-10-20T06:16:57.8364927Z   Building wheel for jieba3k (pyproject.toml): started
+2026-10-20T06:16:58.6394771Z   Building wheel for jieba3k (pyproject.toml): finished with status 'done'
+2026-10-20T06:16:58.6448414Z   Created wheel for jieba3k: filename=jieba3k-0.35.1-py3-none-any.whl size=7398403 sha256=f791b289141641bda3c4975725829797cb5ffcd7c072bfe098d9da5667daa3aa
+2026-10-20T06:16:58.6449651Z   Stored in directory: /home/runner/.cache/pip/wheels/3a/a1/46/8e68055c1713f9c4598774c15ad0541f26d5425ee7423b6493
+2026-10-20T06:16:58.6462763Z Successfully built docx2txt html2text tinysegmenter spider-client feedfinder2 jieba3k
+2026-10-20T06:16:58.9065862Z Installing collected packages: tinysegmenter, striprtf, sortedcontainers, pytz, pystemmer, nvidia-cusparselt-cu13, mpmath, jieba3k, filetype, docx2txt, dirtyjson, cuda-toolkit, wrapt, websocket-client, watchdog, urllib3, tzdata, typing-extensions, truststore, triton, tqdm, tornado, toml, threadpoolctl, tenacity, tantivy, sympy, soupsieve, sniffio, smmap, six, shellingham, safetensors, rpds-py, regex, PyYAML, python-dotenv, pysocks, pypdf, PyJWT, pygments, pyarrow, protobuf, propcache, platformdirs, pillow, packaging, overrides, orjson, nvidia-nvtx, nvidia-nvshmem-cu13, nvidia-nvjitlink, nvidia-nccl-cu13, nvidia-curand, nvidia-cufile, nvidia-cuda-runtime, nvidia-cuda-nvrtc, nvidia-cuda-cupti, numpy, networkx, nest-asyncio, narwhals, mypy-extensions, multidict, mdurl, MarkupSafe, lxml, jsonpointer, jiter, idna, html2text, hf-xet, h11, greenlet, fsspec, frozenlist, filelock, feedparser-sgmllib, distro, defusedxml, cuda-pathfinder, cssselect, cloudpickle, click, charset_normalizer, certifi, cachetools, blinker, attrs, annotated-types, annotated-doc, aiohappyeyeballs, yarl, wsproto, typing-inspection, typing-inspect, SQLAlchemy, scipy, requests, referencing, redis, python-dateutil, pyee, pydantic-core, outcome, nvidia-cusparse, nvidia-cufft, nvidia-cublas, marshmallow, markdown-it-py, jsonpatch, joblib, jinja2, httpcore2, httpcore, gitdb, feedparser, elastic-transport, deprecation, deprecated, cuda-bindings, chromedriver-autoinstaller, beautifulsoup4, anyio, aiosignal, trio, tiktoken, spider-client, scikit-learn, rich, requests-toolbelt, requests-file, pydeck, pydantic, playwright, pandas, nvidia-cusolver, nvidia-cudnn-cu13, nltk, jsonschema-specifications, httpx2, httpx, gitpython, feedfinder2, elasticsearch, dataclasses-json, bm25s, aiohttp, typer, trio-websocket, tldextract, pydantic-settings, openai, ollama, llama-index-core, llama-cloud, langsmith, lance-namespace-urllib3-client, jsonschema, huggingface-hub, torch, tokenizers, selenium, newspaper3k, llama-index-vector-stores-elasticsearch, llama-index-storage-kvstore-redis, llama-index-storage-chat_store-redis, llama-index-retrievers-bm25, llama-index-readers-file, llama-index-llms-openai, llama-index-llms-ollama, llama-index-legacy, llama-index-indices-managed-llama-cloud, llama-index-embeddings-openai, llama-index-embeddings-langchain, llama-cloud-services, langchain-core, lance-namespace, altair, transformers, streamlit, llama-parse, llama_index.storage.index_store.redis, llama_index.storage.docstore.redis, llama-index-readers-web, llama-index-multi-modal-llms-openai, llama-index-cli, llama-index-agent-openai, langchain-text-splitters, langchain_openai, lancedb, sentence-transformers, llama-index-vector-stores-lancedb, llama-index-readers-llama-parse, llama-index-program-openai, langchain, llama-index-question-gen-openai, llama-index-llms-langchain, llama-index-embeddings-huggingface, langchain-community, llama_index
+2026-10-20T06:18:05.1533093Z 
+2026-10-20T06:18:05.1590744Z Successfully installed MarkupSafe-3.0.4 PyJWT-2.15.1 PyYAML-6.0.3 SQLAlchemy-2.1.5 aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 altair-5.5.0 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 attrs-26.1.0 beautifulsoup4-4.15.0 blinker-1.9.0 bm25s-0.2.14 cachetools-5.5.2 certifi-2026.10.19 charset_normalizer-3.5.2 chromedriver-autoinstaller-0.6.4 click-8.5.0 cloudpickle-3.1.2 cssselect-1.6.0 cuda-bindings-13.4.4 cuda-pathfinder-1.8.3 cuda-toolkit-13.0.3.0 dataclasses-json-0.6.7 defusedxml-0.7.1 deprecated-1.3.1 deprecation-2.1.0 dirtyjson-1.0.8 distro-1.9.0 docx2txt-0.8 elastic-transport-8.19.0 elasticsearch-8.19.3 feedfinder2-0.0.4 feedparser-6.0.14 feedparser-sgmllib-2.1.0 filelock-4.2.4 filetype-1.2.0 frozenlist-1.8.0 fsspec-2026.9.0 gitdb-4.0.12 gitpython-3.2.1 greenlet-3.5.6 h11-0.16.0 hf-xet-1.7.0 html2text-2024.2.26 httpcore-1.0.9 httpcore2-2.15.1 httpx-0.27.2 httpx2-2.15.1 huggingface-hub-2.2.0 idna-3.20 jieba3k-0.35.1 jinja2-3.1.6 jiter-0.17.0 joblib-1.6.0 jsonpatch-1.36 jsonpointer-3.4 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 lance-namespace-0.13.0 lance-namespace-urllib3-client-0.13.0 lancedb-0.40.0 langchain-0.3.4 langchain-community-0.3.3 langchain-core-0.3.63 langchain-text-splitters-0.3.8 langchain_openai-0.2.3 langsmith-0.1.147 llama-cloud-0.1.19 llama-cloud-services-0.6.21 llama-index-agent-openai-0.3.4 llama-index-cli-0.3.1 llama-index-core-0.11.23 llama-index-embeddings-huggingface-0.3.1 llama-index-embeddings-langchain-0.2.1 llama-index-embeddings-openai-0.2.5 llama-index-indices-managed-llama-cloud-0.6.0 llama-index-legacy-0.9.48.post4 llama-index-llms-langchain-0.4.2 llama-index-llms-ollama-0.3.4 llama-index-llms-openai-0.2.16 llama-index-multi-modal-llms-openai-0.2.3 llama-index-program-openai-0.2.0 llama-index-question-gen-openai-0.2.0 llama-index-readers-file-0.2.2 llama-index-readers-llama-parse-0.3.0 llama-index-readers-web-0.2.4 llama-index-retrievers-bm25-0.4.0 llama-index-storage-chat_store-redis-0.3.2 llama-index-storage-kvstore-redis-0.2.0 llama-index-vector-stores-elasticsearch-0.3.3 llama-index-vector-stores-lancedb-0.2.4 llama-parse-0.6.21 llama_index-0.11.19 llama_index.storage.docstore.redis-0.2.0 llama_index.storage.index_store.redis-0.3.0 lxml-6.1.3 markdown-it-py-4.2.0 marshmallow-3.26.2 mdurl-0.1.2 mpmath-1.3.0 multidict-7.1.0 mypy-extensions-1.1.0 narwhals-2.27.1 nest-asyncio-1.6.0 networkx-3.6.1 newspaper3k-0.2.8 nltk-3.10.3 numpy-1.26.4 nvidia-cublas-13.1.1.3 nvidia-cuda-cupti-13.0.85 nvidia-cuda-nvrtc-13.0.88 nvidia-cuda-runtime-13.0.96 nvidia-cudnn-cu13-9.24.0.43 nvidia-cufft-12.0.0.61 nvidia-cufile-1.15.1.6 nvidia-curand-10.4.0.35 nvidia-cusolver-12.0.4.66 nvidia-cusparse-12.6.3.3 nvidia-cusparselt-cu13-0.8.1 nvidia-nccl-cu13-2.30.7 nvidia-nvjitlink-13.4.92 nvidia-nvshmem-cu13-3.4.5 nvidia-nvtx-13.0.85 ollama-0.3.3 openai-1.109.1 orjson-3.13.0 outcome-1.3.0.post0 overrides-7.7.0 packaging-24.2 pandas-2.3.3 pillow-10.4.0 platformdirs-4.13.5 playwright-1.64.0 propcache-0.5.4 protobuf-5.29.6 pyarrow-26.0.0 pydantic-2.14.1 pydantic-core-2.50.1 pydantic-settings-2.16.0 pydeck-0.9.3 pyee-13.0.1 pygments-2.21.0 pypdf-4.3.1 pysocks-1.7.1 pystemmer-2.2.0.3 python-dateutil-2.9.0.post0 python-dotenv-1.2.4 pytz-2026.5 redis-5.3.1 referencing-0.37.0 regex-2026.9.29 requests-2.34.2 requests-file-3.0.1 requests-toolbelt-1.0.0 rich-13.9.4 rpds-py-2026.9.1 safetensors-0.8.0 scikit-learn-1.9.1 scipy-1.17.1 selenium-4.51.0 sentence-transformers-5.7.0 shellingham-1.5.4 six-1.17.0 smmap-5.0.3 sniffio-1.3.1 sortedcontainers-2.4.0 soupsieve-3.0.3 spider-client-0.0.27 streamlit-1.39.0 striprtf-0.0.26 sympy-1.14.0 tantivy-0.26.2 tenacity-8.5.0 threadpoolctl-3.7.0 tiktoken-0.14.0 tinysegmenter-0.3 tldextract-5.4.0 tokenizers-0.23.3 toml-0.10.2 torch-2.14.1 tornado-6.5.10 tqdm-4.70.1 transformers-5.20.2 trio-0.34.0 trio-websocket-0.12.2 triton-3.8.0 truststore-0.10.5 typer-0.27.3 typing-extensions-4.16.0 typing-inspect-0.9.0 typing-inspection-0.4.4 tzdata-2026.5 urllib3-2.8.0 watchdog-5.0.3 websocket-client-1.9.2 wrapt-2.5.1 wsproto-1.3.2 yarl-1.25.1
+2026-10-20T06:18:07.2632713Z Collecting pytest
+2026-10-20T06:18:07.3490845Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+2026-10-20T06:18:07.3780193Z Collecting allure-pytest
+2026-10-20T06:18:07.3911757Z   Downloading allure_pytest-2.16.2-py3-none-any.whl.metadata (3.0 kB)
+2026-10-20T06:18:07.4105233Z Collecting iniconfig>=1.0.1 (from pytest)
+2026-10-20T06:18:07.4234307Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-10-20T06:18:07.4266551Z Requirement already satisfied: packaging>=22 in /opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages (from pytest) (24.2)
+2026-10-20T06:18:07.4439112Z Collecting pluggy<2,>=1.5 (from pytest)
+2026-10-20T06:18:07.4567434Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+2026-10-20T06:18:07.4601445Z Requirement already satisfied: pygments>=2.7.2 in /opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages (from pytest) (2.21.0)
+2026-10-20T06:18:07.4998495Z Collecting allure-python-commons==2.16.2 (from allure-pytest)
+2026-10-20T06:18:07.5126320Z   Downloading allure_python_commons-2.16.2-py3-none-any.whl.metadata (5.7 kB)
+2026-10-20T06:18:07.5166091Z Requirement already satisfied: attrs>=16.0.0 in /opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages (from allure-python-commons==2.16.2->allure-pytest) (26.1.0)
+2026-10-20T06:18:07.5308646Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+2026-10-20T06:18:07.5910590Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+2026-10-20T06:18:07.6055820Z Downloading allure_pytest-2.16.2-py3-none-any.whl (12 kB)
+2026-10-20T06:18:07.6201588Z Downloading allure_python_commons-2.16.2-py3-none-any.whl (16 kB)
+2026-10-20T06:18:07.6345343Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-10-20T06:18:07.7401857Z Installing collected packages: pluggy, iniconfig, pytest, allure-python-commons, allure-pytest
+2026-10-20T06:18:07.9139165Z 
+2026-10-20T06:18:07.9177551Z Successfully installed allure-pytest-2.16.2 allure-python-commons-2.16.2 iniconfig-2.3.1 pluggy-1.7.0 pytest-9.1.1
+2026-10-20T06:18:07.9886437Z ##[group]Run pytest -m "smoke and not llm" -q --tb=short
+2026-10-20T06:18:07.9886810Z [36;1mpytest -m "smoke and not llm" -q --tb=short[0m
+2026-10-20T06:18:07.9968775Z shell: /usr/bin/bash -e {0}
+2026-10-20T06:18:07.9969146Z env:
+2026-10-20T06:18:07.9969413Z   USE_MOCK_EMBED: 1
+2026-10-20T06:18:07.9969647Z   THINKRAG_ENV: development
+2026-10-20T06:18:07.9969890Z   PYTHONUTF8: 1
+2026-10-20T06:18:07.9970117Z   PYTHONIOENCODING: utf-8
+2026-10-20T06:18:07.9970444Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-20T06:18:07.9970821Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-20T06:18:07.9971190Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-20T06:18:07.9971512Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-20T06:18:07.9971833Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-20T06:18:07.9972161Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-20T06:18:07.9972563Z ##[endgroup]
+2026-10-20T06:18:08.7467458Z ============================= test session starts ==============================
+2026-10-20T06:18:08.7468105Z platform linux -- Python 3.11.17, pytest-9.1.1, pluggy-1.7.0
+2026-10-20T06:18:08.7469128Z rootdir: /home/runner/work/ThinkRAG/ThinkRAG
+2026-10-20T06:18:08.7469509Z configfile: pytest.ini
+2026-10-20T06:18:08.7469845Z testpaths: tests
+2026-10-20T06:18:08.7470214Z plugins: allure-pytest-2.16.2, platformdirs-4.13.5, anyio-4.15.1
+2026-10-20T06:18:08.7470662Z collected 40 items / 20 deselected / 20 selected
+2026-10-20T06:18:08.7470953Z 
+2026-10-20T06:18:12.3829615Z tests/test_01_upload.py ......xsxxxx                                     [ 60%]
+2026-10-20T06:18:12.6124429Z tests/test_02_chunking.py ....xxx                                        [ 95%]
+2026-10-20T06:18:12.8923508Z tests/test_03_consistency.py x                                           [100%]
+2026-10-20T06:18:12.8924649Z 
+2026-10-20T06:18:12.8925022Z =============================== warnings summary ===============================
+2026-10-20T06:18:12.8926205Z tests/test_01_upload.py::test_supported_format_indexed[\u4ea7\u54c1\u624b\u518c.md]
+2026-10-20T06:18:12.8930755Z   /opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'validate_default' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'validate_default' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+2026-10-20T06:18:12.8935303Z     warnings.warn(
+2026-10-20T06:18:12.8935555Z 
+2026-10-20T06:18:12.8936007Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-10-20T06:18:12.8937013Z ====== 10 passed, 1 skipped, 20 deselected, 9 xfailed, 1 warning in 3.98s ======
+2026-10-20T06:18:13.3562093Z ##[group]Run actions/upload-artifact@v4
+2026-10-20T06:18:13.3562377Z with:
+2026-10-20T06:18:13.3562588Z   name: allure-results
+2026-10-20T06:18:13.3562807Z   path: reports/allure-results
+2026-10-20T06:18:13.3563066Z   if-no-files-found: ignore
+2026-10-20T06:18:13.3563320Z   compression-level: 6
+2026-10-20T06:18:13.3563539Z   overwrite: false
+2026-10-20T06:18:13.3563767Z   include-hidden-files: false
+2026-10-20T06:18:13.3563998Z env:
+2026-10-20T06:18:13.3564224Z   USE_MOCK_EMBED: 1
+2026-10-20T06:18:13.3564461Z   THINKRAG_ENV: development
+2026-10-20T06:18:13.3564686Z   PYTHONUTF8: 1
+2026-10-20T06:18:13.3564925Z   PYTHONIOENCODING: utf-8
+2026-10-20T06:18:13.3565207Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-20T06:18:13.3565577Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-20T06:18:13.3565937Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-20T06:18:13.3566363Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-20T06:18:13.3566679Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-20T06:18:13.3567027Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-20T06:18:13.3567331Z ##[endgroup]
+2026-10-20T06:18:13.4839333Z (node:2444) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-20T06:18:13.4839959Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-20T06:18:13.5010622Z With the provided path, there will be 148 files uploaded
+2026-10-20T06:18:13.5019326Z Artifact name is valid!
+2026-10-20T06:18:13.5019746Z Root directory input is valid!
+2026-10-20T06:18:13.7863677Z Beginning upload of artifact content to blob storage
+2026-10-20T06:18:13.8941958Z (node:2444) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-20T06:18:14.1279992Z Uploaded bytes 68426
+2026-10-20T06:18:14.1758577Z Finished uploading artifact content to blob storage!
+2026-10-20T06:18:14.1759551Z SHA256 digest of uploaded artifact zip is 8492b4c6da2eab0174a79bc4fd439a631c90f5b46833940304c73552e3bfa7c8
+2026-10-20T06:18:14.1760524Z Finalizing artifact upload
+2026-10-20T06:18:14.4154103Z Artifact allure-results.zip successfully finalized. Artifact ID 12244642205
+2026-10-20T06:18:14.4154837Z Artifact allure-results has been successfully uploaded! Final size is 68426 bytes. Artifact ID is 12244642205
+2026-10-20T06:18:14.4161030Z Artifact download URL: https://github.com/yan231ux/ThinkRAG/actions/runs/39379364541/artifacts/12244642205
+2026-10-20T06:18:14.4310112Z Post job cleanup.
+2026-10-20T06:18:14.5414409Z (node:2459) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-20T06:18:14.5415046Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-20T06:18:14.5596539Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/ThinkRAG/ThinkRAG --files-from manifest.txt --use-compress-program zstdmt
+2026-10-20T06:18:30.6343164Z (node:2459) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-20T06:18:31.6240796Z Sent 0 of 3316960033 (0.0%), 0.0 MBs/sec
+2026-10-20T06:18:32.6228794Z Sent 469762048 of 3316960033 (14.2%), 223.8 MBs/sec
+2026-10-20T06:18:33.6239815Z Sent 939524096 of 3316960033 (28.3%), 298.4 MBs/sec
+2026-10-20T06:18:34.6250824Z Sent 1342177280 of 3316960033 (40.5%), 319.7 MBs/sec
+2026-10-20T06:18:35.6257282Z Sent 1610612736 of 3316960033 (48.6%), 306.9 MBs/sec
+2026-10-20T06:18:36.6279927Z Sent 2147483648 of 3316960033 (64.7%), 341.0 MBs/sec
+2026-10-20T06:18:37.6264110Z Sent 2483027968 of 3316960033 (74.9%), 338.0 MBs/sec
+2026-10-20T06:18:38.6266130Z Sent 2952790016 of 3316960033 (89.0%), 351.7 MBs/sec
+2026-10-20T06:18:39.3046134Z Sent 3316960033 of 3316960033 (100.0%), 364.3 MBs/sec
+2026-10-20T06:18:39.6646145Z Cache saved with the key: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.17-pip-454075a6e85114a325f04cd169b113a5c1693187c8e1be733f2a8b97dd70adf6
+2026-10-20T06:18:39.6762587Z Post job cleanup.
+2026-10-20T06:18:39.7454457Z [command]/usr/bin/git version
+2026-10-20T06:18:39.7486125Z git version 2.55.0
+2026-10-20T06:18:39.7512039Z Temporarily overriding HOME='/home/runner/work/_temp/240cf86e-25b3-454b-8e60-c504b62c1f6e' before making global git config changes
+2026-10-20T06:18:39.7512927Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-20T06:18:39.7516411Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ThinkRAG/ThinkRAG
+2026-10-20T06:18:39.7546980Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T06:18:39.7573094Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-20T06:18:39.7760417Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T06:18:39.7781208Z http.https://github.com/.extraheader
+2026-10-20T06:18:39.7790910Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-20T06:18:39.7832512Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-20T06:18:39.8073344Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T06:18:39.8126302Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-20T06:18:39.8379718Z Cleaning up orphan processes
+2026-10-20T06:18:39.8605127Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
