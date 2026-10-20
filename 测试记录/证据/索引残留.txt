@@ -1,0 +1,61 @@
+ThinkRAG 证据 01 — 索引结构残留导致查询 KeyError
+采集时间：2026-10-20 10:45
+采集方式：读取 storage/index_store.json + 加载索引后打印节点数 + 直接调用检索器复现
+
+============================================================
+一、存储中同时存在两个索引
+============================================================
+
+=== 存储中的索引列表 ===
+[0] id=56547e82-cbb6-4b29-9e73-67d6107d5caa | index_struct节点数=0  | docstore.docs=11
+[1] id=046efa50-aaf7-4d84-be7f-0a8a8d36cd57 | index_struct节点数=10 | docstore.docs=11
+
+应用实际用到的 indices[0]: 56547e82-cbb6-4b29-9e73-67d6107d5caa | nodes_dict= 0
+
+说明：
+- 索引 56547e82 是「删除全部文档」后残留的空索引壳（nodes_dict 为空）；
+- 索引 046efa50 是随后重新上传文档时新建的有效索引（含 10 个切块）；
+- docstore.json 为共享存储，两个索引看到相同的 11 条记录（10 切块 + 1 父文档），
+  因此 BM25 检索器能正常构建并召回节点，问题只在向量检索回查索引结构时暴露。
+
+============================================================
+二、调用检索器复现异常
+============================================================
+
+Traceback (most recent call last):
+  File "diag_repro.py", line 23, in <module>
+    nodes = r._retrieve("云帆 X3 标准版多少钱？")
+  File "server/retriever.py", line 100, in _retrieve
+    vector_nodes = self.vector_retriever.retrieve(query, **kwargs)
+  File "llama_index/core/base/base_retriever.py", line 245, in retrieve
+    nodes = self._retrieve(query_bundle)
+  File "llama_index/core/indices/vector_store/retrievers/retriever.py", line 103, in _retrieve
+    return self._get_nodes_with_embeddings(query_bundle)
+  File "llama_index/core/indices/vector_store/retrievers/retriever.py", line 181, in _get_nodes_with_embeddings
+    return self._build_node_list_from_query_result(query_result)
+  File "llama_index/core/indices/vector_store/retrievers/retriever.py", line 147, in _build_node_list_from_query_result
+    self._index.index_struct.nodes_dict[idx] for idx in query_result.ids
+KeyError: '19aaf448-d216-4c86-938a-f597e3dd899b'
+
+============================================================
+三、服务端日志对应记录（用户侧表现为无错误提示）
+============================================================
+
+An error occurred while processing the query: KeyError: '19aaf448-d216-4c86-938a-f597e3dd899b'
+An error occurred while processing the query: KeyError: '4cccf016-f1bd-4752-8587-72a0b3c23fe7'
+
+说明：perform_query 在 except 中只 print 到控制台，未向上抛出也未提示用户，
+页面因此仅显示 "Couldn't come up with an answer."。
+
+============================================================
+四、处置后回归
+============================================================
+
+备份 storage/index_store.json -> index_store.json.bak，删除 nodes_dict 为空的索引条目后重启：
+=== 存储中的索引列表 ===
+[0] id=046efa50-aaf7-4d84-be7f-0a8a8d36cd57 | index_struct节点数=10 | docstore.docs=11
+
+三问回归：
+  云帆 X3 标准版多少钱？ -> 云帆 X3 标准版官方售价为 1899 元。       Found 5 document(s)
+  整机保修期多久？       -> 整机保修期为 12 个月，自购买之日起计算。 Found 5 document(s)
+  云帆 X3 支持 5G 吗？   -> 没有提到…因此我无法确认它是否支持 5G。  Found 5 document(s)

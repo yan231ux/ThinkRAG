@@ -1,0 +1,38 @@
+ThinkRAG 证据 03 — 知识库为空时构建 BM25 检索器崩溃
+采集时间：2026-10-20 10:29（线上触发）/ 11:05（独立复现）
+采集方式：构造空索引 VectorStoreIndex([]) 后调用 SimpleBM25Retriever.from_defaults，
+          不读写现有 storage，纯内存复现
+
+============================================================
+复现输出（原始记录，含进度条噪声）
+============================================================
+
+C:\Program Files\Python312\Lib\pydantic\_internal\_generate_schema.py:2274: UnsupportedFieldAttributeWarning: The 'validate_default' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'validate_default' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 1532.20it/s]
+The tokenizer parameter is deprecated and will be removed in a future release. Use a stemmer from PyStemmer instead.
+复现目标：知识库为空时提问 → create_query_engine → SimpleBM25Retriever.from_defaults
+构造：VectorStoreIndex([]) 空节点索引
+
+空索引节点数: 0
+resource module not available on Windows
+Split strings: 0it [00:00, ?it/s]                                 Stem Tokens: 0it [00:00, ?it/s]                               C:\Users\曾\Desktop\测试项目\ThinkRAG\.venv\Lib\site-packages\bm25s\__init__.py:305: RuntimeWarning: Mean of empty slice.
+  avg_doc_len = np.array([len(doc_ids) for doc_ids in corpus_token_ids]).mean()
+C:\Users\曾\Desktop\测试项目\ThinkRAG\.venv\Lib\site-packages\numpy\core\_methods.py:129: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+BM25S Count Tokens: 0it [00:00, ?it/s]                                      BM25S Compute Scores: 0it [00:00, ?it/s]                                        Traceback (most recent call last):
+  File "<stdin>", line 15, in <module>
+  File "C:\Users\曾\Desktop\测试项目\ThinkRAG\server\retriever.py", line 52, in from_defaults
+    return BM25Retriever.from_defaults(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\曾\Desktop\测试项目\ThinkRAG\.venv\Lib\site-packages\llama_index\retrievers\bm25\base.py", line 131, in from_defaults
+    return cls(
+           ^^^^
+  File "C:\Users\曾\Desktop\测试项目\ThinkRAG\.venv\Lib\site-packages\llama_index\retrievers\bm25\base.py", line 90, in __init__
+    self.bm25.index(corpus_tokens, show_progress=verbose)
+  File "C:\Users\曾\Desktop\测试项目\ThinkRAG\.venv\Lib\site-packages\bm25s\__init__.py", line 501, in index
+    vocab_dict[""] = max(vocab_dict.values()) + 1
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: max() iterable argument is empty
+捕获异常: ValueError: max() iterable argument is empty
+

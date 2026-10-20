@@ -11,6 +11,31 @@ storage/
 # Test files
 test_*.*
 
+# 例外：pytest 用例目录必须纳入版本管理，否则 CI 拉不到测试代码
+!tests/
+!tests/**
+
+# 测试产物（报告可随时重新生成，不入库）
+reports/
+tools/
+测试记录/备份/
+htmlcov/
+allure-results/
+
+# 本地调试脚本与截图，不属于交付内容
+probe_*.py
+diag_*.py
+shot_*.png
+probe_*.png
+*.bak
+
+# 含 API Key 的本地启动脚本，禁止入库
+启动ThinkRAG.bat
+
+# 体积过大的测试样本（各 2.5MB / 6.9MB），不入库；CI 会自动 skip 对应用例
+测试记录/测试数据/大文件.txt
+测试记录/测试数据/答辩演示.pptx
+
 # Python venv
 .venv/
 bin/

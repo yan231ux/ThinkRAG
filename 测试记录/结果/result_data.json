@@ -1,0 +1,86 @@
+[
+  {
+    "scenario": "dup",
+    "ok": true,
+    "first_nodes": 10,
+    "first_stats": {
+      "docstore": 11,
+      "nodes_dict": 10,
+      "vectors": 10
+    },
+    "second_nodes": 10,
+    "second_stats": {
+      "docstore": 22,
+      "nodes_dict": 20,
+      "vectors": 20
+    },
+    "duplicated": true,
+    "wall_seconds": 24.8
+  },
+  {
+    "scenario": "overwrite",
+    "ok": true,
+    "before": {
+      "docstore": 11,
+      "nodes_dict": 10,
+      "vectors": 10
+    },
+    "after": {
+      "docstore": 22,
+      "nodes_dict": 20,
+      "vectors": 20
+    },
+    "answer_before": "官方售价：标准版 1899 元，尊享版 2499 元。",
+    "answer_after": "标准版 1899 元。",
+    "wall_seconds": 30.0
+  },
+  {
+    "scenario": "multidoc",
+    "ok": true,
+    "docstore": 14,
+    "nodes_dict": 12,
+    "vectors": 12,
+    "q_bulk": {
+      "q": "企业采购 50 台有折扣吗？",
+      "answer": "有折扣。单笔采购满 50 台可享 8 折优惠。",
+      "found": 5,
+      "seconds": 0.92,
+      "error": null
+    },
+    "q_package": {
+      "q": "旅行收纳包多少钱？",
+      "answer": "旅行收纳包 129 元。",
+      "found": 5,
+      "seconds": 0.36,
+      "error": null
+    },
+    "q_warranty": {
+      "q": "整机保修期多久？",
+      "answer": "整机保修期为 12 个月，自购买之日起计算。",
+      "found": 5,
+      "seconds": 0.82,
+      "error": null
+    },
+    "wall_seconds": 30.0
+  },
+  {
+    "scenario": "delete",
+    "ok": true,
+    "deleted_ref": "c7352f72-9dc3-4858-b172-0dc52914060e",
+    "before": {
+      "docstore": 14,
+      "nodes_dict": 12,
+      "vectors": 12
+    },
+    "after": {
+      "docstore": 11,
+      "nodes_dict": 10,
+      "vectors": 10
+    },
+    "answer_before": "旅行收纳包 129 元。",
+    "answer_after": "抱歉，根据提供的产品手册内容，我没有找到关于旅行收纳包价格的信息，因此无法回答。",
+    "found_before": 5,
+    "found_after": 5,
+    "wall_seconds": 29.6
+  }
+]

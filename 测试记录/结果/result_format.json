@@ -1,0 +1,148 @@
+[
+  {
+    "scenario": "fmt:产品手册.md",
+    "ok": true,
+    "file": "产品手册.md",
+    "nodes": 3,
+    "seconds": 0.37,
+    "docstore": 6,
+    "nodes_dict": 3,
+    "vectors": 3,
+    "sample": "云帆 X3 智能旅行规划仪 产品手册（V2.3）",
+    "wall_seconds": 23.8
+  },
+  {
+    "scenario": "fmt:产品价格表.csv",
+    "ok": true,
+    "file": "产品价格表.csv",
+    "nodes": 1,
+    "seconds": 0.36,
+    "docstore": 2,
+    "nodes_dict": 1,
+    "vectors": 1,
+    "sample": "YF-X3-2026, 标准版, 1899, 238, 4200, IPX7\nYF-X3-2026, 尊享版, 2499, 238, 4200, IPX7\nYF-X2-2025, 标准版, 1499,",
+    "wall_seconds": 24.0
+  },
+  {
+    "scenario": "fmt:产品配置表.xlsx",
+    "ok": false,
+    "error": "ImportError: Please install openpyxl to read Excel files. You can install it with 'pip install openpyxl'",
+    "trace": "gs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\曾\\Desktop\\测试项目\\ThinkRAG\\.venv\\Lib\\site-packages\\llama_index\\readers\\file\\tabular\\base.py\", line 177, in load_data\n    raise ImportError(\nImportError: Please install openpyxl to read Excel files. You can install it with 'pip install openpyxl'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\曾\\Desktop\\测试项目\\ThinkRAG\\测试记录\\matrix_worker.py\", line 123, in <module>\n    im, nodes, dur = index_files([fname], 512, 100)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\曾\\Desktop\\测试项目\\ThinkRAG\\测试记录\\matrix_worker.py\", line 86, in index_files\n    nodes = im.load_files([{\"name\": n} for n in names], chunk_size, overlap)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\曾\\Desktop\\测试项目\\ThinkRAG\\server\\index.py\", line 97, in load_files\n    documents = SimpleDirectoryReader(input_files=files).load_data()\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\曾\\Desktop\\测试项目\\ThinkRAG\\.venv\\Lib\\site-packages\\llama_index\\core\\readers\\file\\base.py\", line 700, in load_data\n    SimpleDirectoryReader.load_file(\n  File \"C:\\Users\\曾\\Desktop\\测试项目\\ThinkRAG\\.venv\\Lib\\site-packages\\llama_index\\core\\readers\\file\\base.py\", line 544, in load_file\n    raise ImportError(str(e))\nImportError: Please install openpyxl to read Excel files. You can install it with 'pip install openpyxl'\n",
+    "wall_seconds": 24.1
+  },
+  {
+    "scenario": "fmt:产品说明书.docx",
+    "ok": true,
+    "file": "产品说明书.docx",
+    "nodes": 1,
+    "seconds": 0.38,
+    "docstore": 2,
+    "nodes_dict": 1,
+    "vectors": 1,
+    "sample": "云帆 X3 智能旅行规划仪 产品说明书\n\n一、产品基本信息\n\n产品型号：YF-X3-2026\n\n官方售价：标准版 1899 元，尊享版 2499 元\n\n机身重量：238 克，电池容量：4200 毫安时",
+    "wall_seconds": 23.4
+  },
+  {
+    "scenario": "fmt:答辩演示.pptx",
+    "ok": false,
+    "file": "答辩演示.pptx",
+    "error": "ImportError: Please install extra dependencies that are required for the PptxReader: `pip install torch transformers python-pptx Pillow`",
+    "wall_seconds": 24.0
+  },
+  {
+    "scenario": "fmt:测试文档.pdf",
+    "ok": true,
+    "file": "测试文档.pdf",
+    "nodes": 1,
+    "seconds": 0.57,
+    "docstore": 2,
+    "nodes_dict": 1,
+    "vectors": 1,
+    "sample": "Cloud Computing - 实验二：利用 DevStack\n部署 OpenStack 并创建虚拟机实例 \n1. 实验目的  \n1. 学习如何使用 DevStack 部署 OpenStack 环",
+    "wall_seconds": 24.1
+  },
+  {
+    "scenario": "fmt:结构化数据.json",
+    "ok": true,
+    "file": "结构化数据.json",
+    "nodes": 1,
+    "seconds": 0.35,
+    "docstore": 2,
+    "nodes_dict": 1,
+    "vectors": 1,
+    "sample": "{\r\n  \"product\": \"云帆 X3 智能旅行规划仪\",\r\n  \"model\": \"YF-X3-2026\",\r\n  \"price\": {\r\n    \"标准版\": 1899,\r\n    \"尊享版",
+    "wall_seconds": 23.7
+  },
+  {
+    "scenario": "fmt:产品页.html",
+    "ok": true,
+    "file": "产品页.html",
+    "nodes": 1,
+    "seconds": 0.37,
+    "docstore": 2,
+    "nodes_dict": 1,
+    "vectors": 1,
+    "sample": "<!DOCTYPE html>\r\n<html><head><meta charset=\"utf-8\"><title>云帆 X3 产品页</title></head>\r\n<body>\r\n<h1>云帆 X",
+    "wall_seconds": 23.7
+  },
+  {
+    "scenario": "fmt:伪装文件.exe",
+    "ok": true,
+    "file": "伪装文件.exe",
+    "nodes": 3,
+    "seconds": 0.48,
+    "docstore": 4,
+    "nodes_dict": 3,
+    "vectors": 3,
+    "sample": "MZ云帆 X3 智能旅行规划仪 产品手册（V2.3）\n\n一、产品基本信息\n产品名称：云帆 X3 智能旅行规划仪\n产品型号：YF-X3-2026\n上市日期：2026 年 3 月 18 日\n生产厂商：云帆",
+    "wall_seconds": 23.8
+  },
+  {
+    "scenario": "fmt:空文件.txt",
+    "ok": true,
+    "file": "空文件.txt",
+    "nodes": 1,
+    "seconds": 0.33,
+    "docstore": 2,
+    "nodes_dict": 1,
+    "vectors": 1,
+    "sample": "",
+    "wall_seconds": 23.7
+  },
+  {
+    "scenario": "fmt:无扩展名文件",
+    "ok": true,
+    "file": "无扩展名文件",
+    "nodes": 3,
+    "seconds": 0.48,
+    "docstore": 4,
+    "nodes_dict": 3,
+    "vectors": 3,
+    "sample": "云帆 X3 智能旅行规划仪 产品手册（V2.3）\r\n\r\n一、产品基本信息\r\n产品名称：云帆 X3 智能旅行规划仪\r\n产品型号：YF-X3-2026\r\n上市日期：2026 年 3 月 18 日\r\n生产厂",
+    "wall_seconds": 23.9
+  },
+  {
+    "scenario": "fmt:产品 手册(最终版)#1.txt",
+    "ok": true,
+    "file": "产品 手册(最终版)#1.txt",
+    "nodes": 3,
+    "seconds": 0.48,
+    "docstore": 4,
+    "nodes_dict": 3,
+    "vectors": 3,
+    "sample": "云帆 X3 智能旅行规划仪 产品手册（V2.3）\r\n\r\n一、产品基本信息\r\n产品名称：云帆 X3 智能旅行规划仪\r\n产品型号：YF-X3-2026\r\n上市日期：2026 年 3 月 18 日\r\n生产厂",
+    "wall_seconds": 23.6
+  },
+  {
+    "scenario": "fmt:大文件.txt",
+    "ok": true,
+    "file": "大文件.txt",
+    "nodes": 2700,
+    "seconds": 147.47,
+    "docstore": 2701,
+    "nodes_dict": 2700,
+    "vectors": 2700,
+    "sample": "云帆 X3 智能旅行规划仪 产品手册（V2.3）\r\n\r\n一、产品基本信息\r\n产品名称：云帆 X3 智能旅行规划仪\r\n产品型号：YF-X3-2026\r\n上市日期：2026 年 3 月 18 日\r\n生产厂",
+    "wall_seconds": 171.2
+  }
+]
