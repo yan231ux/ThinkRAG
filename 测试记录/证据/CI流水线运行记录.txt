@@ -52,3 +52,25 @@ configfile: pytest.ini
    这正是用 MockEmbedding 做 CI 的价值——把「解析/切块/计数」这类可确定验证的部分
    放进流水线，把「语义质量」留给本地真实模型跑。
 4. 与本地差异：本地 10 xfailed（有 pptx 样本），CI 9 xfailed + 1 skipped，属预期差异。
+
+======================================================================
+第二次运行（补充核心能力用例后）
+======================================================================
+仓库        : yan231ux/ThinkRAG
+运行编号    : #2
+提交        : 60724d49df80528f6f4737be5a46d4a7eef7fddc
+触发方式    : push → main（测试: 补充核心能力用例、覆盖率与并发压测）
+运行地址    : https://github.com/yan231ux/ThinkRAG/actions/runs/39380690457
+总体结论    : completed / success（9 个步骤全部 success）
+测试结果    : 16 passed, 1 skipped, 20 deselected, 9 xfailed in 4.83s
+
+本轮新增 tests/test_06_core.py 的 6 条用例已纳入流水线执行：
+  tests/test_06_core.py ......   [100%]
+
+passed 从第一次的 10 条增加到 16 条，正好是本轮新增的 6 条，
+说明新增用例在 Linux runner 上同样可执行，没有依赖本地 Windows 环境。
+
+两次运行对比：
+  第一次  #1  10 passed / 9 xfailed / 1 skipped   3.98s
+  第二次  #2  16 passed / 9 xfailed / 1 skipped   4.83s
+  新增 6 条用例仅增加 0.85 秒，MockEmbedding 方案的开销可以忽略。
